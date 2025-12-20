@@ -1,0 +1,115 @@
+//----------------------------------------------------------//
+//	OVERLAY
+//----------------------------------------------------------//
+figure.overlay img {
+  opacity: 1;
+  width: 100%;
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+.overlay {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  figcaption,
+  .figcaption {
+    padding: 0.5rem;
+    z-index: 5;
+    pointer-events: none;
+  }
+  * {
+    @include transition(all 0.4s ease);
+  }
+  img {
+    @include transition(none);
+  }
+  &:not(.caption-overlay) i {
+    display: block;
+    @include font-size(2rem);
+  }
+  a {
+    position: relative;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    cursor: pointer !important;
+  }
+  span.bg {
+    position: relative;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    cursor: pointer !important;
+    opacity: 0;
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba($dark, 0.6);
+  }
+  &.color span.bg {
+    background: rgba($primary, 0.7);
+  }
+  &.light span.bg {
+    background: rgba($white, 0.6);
+  }
+  &:hover span.bg {
+    opacity: 1;
+    @include transition(opacity 0.35s ease-in-out);
+  }
+  * {
+    color: $white !important;
+  }
+  &.light * {
+    color: $dark !important;
+  }
+  img {
+    max-width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    vertical-align: top;
+  }
+  figcaption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0.75rem 1rem;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    text-align: center;
+    letter-spacing: $btn-letter-spacing;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .from-top {
+    position: absolute;
+    padding: 0.75rem 1rem;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-80%);
+  }
+  &:hover {
+    figcaption,
+    .figcaption {
+      opacity: 1;
+    }
+    figcaption .from-top,
+    .figcaption .from-top {
+      transform: translateY(-50%);
+    }
+  }
+}

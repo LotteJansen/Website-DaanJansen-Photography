@@ -1,0 +1,117 @@
+:root {
+  --bs-primary: $primary;
+  --bs-primary-rgb: $primary;
+}
+a,
+a:hover,
+.btn-outline-primary:disabled,
+.btn-outline-primary.disabled,
+.btn-link,
+.btn-link:hover,
+.dropdown-menu,
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-header,
+.dropdown-menu-dark .dropdown-item.active,
+.dropdown-menu-dark .dropdown-item:active,
+.nav-link:hover,
+.nav-link:focus,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link,
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .show>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-text a,
+.navbar-dark .navbar-text a:hover,
+.navbar-dark .navbar-text a:focus,
+.unordered-list.bullet-primary li:before,
+.icon-list.bullet-primary i,
+.filter ul li a.active,
+.filter ul li a:hover,
+.navbar .navbar-brand,
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .show>.nav-link,
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-text a,
+.navbar .navbar-text a:hover,
+.navbar .navbar-text a:focus,
+.plyr--full-ui input[type=range],
+.was-validated .form-check-input:invalid~.form-check-label,
+.form-check-input.is-invalid~.form-check-label,
+.form-check-input.is-valid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
+  color: #7967fd;
+}
+.form-check-input:checked,
+.form-check-input[type=checkbox]:indeterminate,
+.btn-primary,
+.btn-primary:hover,
+.btn-check:checked+.btn-primary,
+.btn-check:active+.btn-primary,
+.btn-primary:active,
+.btn-primary.active,
+.show>.btn-primary.dropdown-toggle,
+.btn-check:checked+.btn-outline-primary,
+.btn-check:active+.btn-outline-primary,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-outline-primary.dropdown-toggle.show,
+.btn-check:focus+.btn-primary,
+.btn-primary:focus,
+.btn-primary:disabled:not(.btn-circle):not(.btn-block),
+.btn-primary.disabled:not(.btn-circle):not(.btn-block) {
+  background-color: #7967fd;
+  border-color: #7967fd;
+}
+.btn-outline-primary,
+.btn-outline-primary:hover {
+  color: #7967fd;
+  border-color: #7967fd;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link,
+.form-check-input.is-valid:checked,
+.was-validated .form-check-input:valid:checked {
+  background-color: #7967fd;
+}
+.border-primary {
+  border-color: #7967fd !important;
+}
+::-moz-selection {
+  background: rgba(121, 103, 253, 0.3);
+}
+::selection {
+  background: rgba(121, 103, 253, 0.3);
+}
+.nav-tabs.nav-tabs-basic .nav-link:hover,
+.nav-tabs.nav-tabs-basic .nav-link:focus,
+.form-check-input.is-valid,
+.was-validated .form-check-input:valid {
+  border-color: #7967fd;
+}
+.nav-tabs.nav-tabs-basic .nav-link.active,
+.nav-tabs.nav-tabs-basic .nav-item.show .nav-link {
+  color: #7967fd;
+  border-color: #7967fd;
+}
+.overlay.color span.bg {
+  background: rgba(121, 103, 253, 0.7);
+}
+.plyr__control--overlaid:focus,
+.plyr__control--overlaid:hover {
+  color: #7967fd !important;
+}
+.plyr--video .plyr__controls .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__controls .plyr__control:hover,
+.plyr--video .plyr__controls .plyr__control[aria-expanded=true] {
+  background: #7967fd;
+}

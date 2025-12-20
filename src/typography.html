@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('_head.html')
+</head>
+<body>
+  <div class="content-wrapper">
+    @@include('_navbar.html', {
+      "page": "features"
+    })
+    <section>
+      <div class="container pt-7 pb-15">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-8 mx-auto text-center">
+                <h2 class="mb-3">Typography</h2>
+                <p class="lead mb-10">Use our custom typography examples for your headings, titles and other text. For further typography examples please visit <a href="https://getbootstrap.com/docs/5.2/content/typography/" class="hover" target="_blank">Bootstrap docs</a>.</p>
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+            <div class="row gy-10">
+              <div class="col-lg-6">
+                <div class="row gy-10">
+                  <div class="col-md-6">
+                    <h1>h1. heading</h1>
+                    <h2>h2. heading</h2>
+                    <h3>h3. heading</h3>
+                    <h4>h4. heading</h4>
+                    <h5>h5. heading</h5>
+                    <h6 class="mb-0">h6. heading</h6>
+                  </div>
+                  <!-- /column -->
+                  <div class="col-md-6">
+                    <h1 class="text-uppercase">h1. heading</h1>
+                    <h2 class="text-uppercase">h2. heading</h2>
+                    <h3 class="text-uppercase">h3. heading</h3>
+                    <h4 class="text-uppercase">h4. heading</h4>
+                    <h5 class="text-uppercase">h5. heading</h5>
+                    <h6 class="text-uppercase mb-0">h6. heading</h6>
+                  </div>
+                  <!-- /column -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /column -->
+              <div class="col-lg-5 ms-auto">
+                <p class="lead mb-0">This is a lead paragraph. It stands out from regular paragraphs.</p>
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+            <hr class="my-14">
+            <h1 class="display-1">Display 1</h1>
+            <h1 class="display-2">Display 2</h1>
+            <h1 class="display-3">Display 3</h1>
+            <h1 class="display-4">Display 4</h1>
+            <h1 class="display-5">Display 5</h1>
+            <h1 class="display-6">Display 6</h1>
+            <hr class="my-14">
+            <figure>
+              <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </figcaption>
+            </figure>
+            <hr class="my-14">
+            <div class="row gy-6">
+              <div class="col-lg-4">
+                <ul class="unordered-list bullet-primary mb-0">
+                  <li>Aenean eu leo quam.</li>
+                  <li>Nullam quis risus eget.</li>
+                  <li>Donec id elit non mi porta.</li>
+                  <li>Fusce dapibus cursus.</li>
+                </ul>
+              </div>
+              <!-- /column -->
+              <div class="col-lg-4">
+                <ul class="icon-list bullet-primary mb-0">
+                  <li><span><i class="uil uil-arrow-right"></i></span><span>Aenean eu leo quam.</span></li>
+                  <li><span><i class="uil uil-arrow-right"></i></span><span>Nullam quis risus eget.</span></li>
+                  <li><span><i class="uil uil-arrow-right"></i></span><span>Donec id elit non mi porta.</span></li>
+                  <li><span><i class="uil uil-arrow-right"></i></span><span>Fusce dapibus cursus.</span></li>
+                </ul>
+              </div>
+              <!-- /column -->
+              <div class="col-lg-4">
+                <ol class="mb-0">
+                  <li>Aenean eu leo quam.</li>
+                  <li>Nullam quis risus eget.</li>
+                  <li>Donec id elit non mi porta.</li>
+                  <li>Fusce dapibus cursus.</li>
+                </ol>
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+            <hr class="my-14">
+            <div class="row gx-lg-8 gx-xl-12">
+              <div class="col-md-6">
+                <p><span class="dropcap">A</span>enean non lectus sit amet est imperdiet cursus elementum vitae eros. Cras quis odio in risus euismod suscipit. Fusce viverra ligula vel justo bibendum semper amet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo.</p>
+              </div>
+              <!-- /column -->
+              <div class="col-md-6">
+                <p><span class="dropcap text-primary">A</span>enean non lectus sit amet est imperdiet cursus elementum vitae eros. Cras quis odio in risus euismod suscipit. Fusce viverra ligula vel justo bibendum semper amet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo.</p>
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+        <div class="card mt-6">
+          <div class="card-body py-6">
+            @@include('_footer.html')
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!--/.container -->
+    </section>
+    @@include('_bg.html')
+  </div>
+  <!-- /.content-wrapper -->
+  @@include('_scripts.html')
+</body>
+</html>

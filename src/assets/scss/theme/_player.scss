@@ -1,0 +1,39 @@
+//----------------------------------------------------------//
+//	PLYR
+//----------------------------------------------------------//
+video.player {
+  max-width: 100%;
+}
+.plyr {
+  border-radius: $border-radius;
+  position: relative;
+  z-index: 2;
+}
+.plyr__control--overlaid {
+  border: 0;
+  padding: 1.25rem;
+  background: $bg;
+  box-shadow: $box-shadow;
+  color: $headings-color;
+  &:focus,
+  &:hover {
+    background: $bg !important;
+    opacity: 0.9 !important;
+    color: $primary !important;
+    box-shadow: $box-shadow;
+    @include transition($link-transition);
+  }
+}
+.plyr--video .plyr__controls {
+  background: linear-gradient(transparent, rgba($bg, 0.2));
+  .plyr__control {
+    &.plyr__tab-focus,
+    &:hover,
+    &[aria-expanded="true"] {
+      background: $primary;
+    }
+  }
+}
+.plyr--full-ui input[type="range"] {
+  color: $primary;
+}

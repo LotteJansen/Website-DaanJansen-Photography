@@ -1,0 +1,91 @@
+//----------------------------------------------------------//
+//	BUTTON
+//----------------------------------------------------------//
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: $btn-letter-spacing;
+  @include box-shadow($btn-box-shadow);
+  transform: translateY(0);
+  &:hover {
+    transform: translateY(-0.15rem);
+    @include box-shadow($btn-active-box-shadow);
+  }
+  .btn-check:focus + &,
+  &:focus {
+    box-shadow: none;
+  }
+  &.btn-circle {
+    padding: 0;
+    border-radius: 100% !important;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include font-size(1rem);
+    line-height: 1;
+    backface-visibility: hidden;
+    &.btn-sm {
+      width: 1.6rem;
+      height: 1.6rem;
+      @include font-size(0.8rem);
+      i {
+        @include font-size(0.85rem);
+      }
+    }
+    &.btn-lg {
+      width: 3rem;
+      height: 3rem;
+      @include font-size(1.3rem);
+    }
+  }
+}
+button:focus {
+  outline: 0;
+}
+@each $color,
+$value in map-merge($button-colors,("dark": $gray-600)) {
+  .btn-#{$color} {
+    @include button-variant-custom($value, $value);
+  }
+}
+.btn-dark,
+.btn-dark:hover,
+.btn-dark:focus {
+  color: $white;
+}
+//----------------------------------------------------------//
+//	SOCIAL
+//----------------------------------------------------------//
+.social a:not(.btn-circle) {
+  @include font-size(1rem);
+  i {
+    @include font-size(1rem);
+  }
+}
+@each $color,
+$value in $brand-colors {
+  .social a.btn-circle[class*="#{$color}"]:hover {
+    color: $value;
+  }
+}
+.social>a {
+  margin: 0 0.5rem 0 0;
+}
+[class*="text-end"] .social>a,
+.social[class*="text-end"]>a {
+  margin: 0 0 0 0.5rem;
+}
+@media (min-width: 768px) {
+  [class*="text-md-end"] .social>a,
+  .social[class*="text-md-end"]>a {
+    margin: 0 0 0 0.5rem;
+  }
+}
+.text-center .social>a,
+.social.text-center>a {
+  margin: 0 0.35rem;
+}

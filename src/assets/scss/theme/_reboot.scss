@@ -1,0 +1,486 @@
+//----------------------------------------------------------//
+//	GENERAL
+//----------------------------------------------------------//
+@import url($path-to-fonts);
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+}
+::-moz-selection {
+  background: rgba($primary, 0.3);
+  color: $headings-color;
+}
+::selection {
+  background: rgba($primary, 0.3);
+  color: $headings-color;
+}
+a {
+  @include transition($btn-transition);
+  &:focus {
+    outline: 0;
+  }
+  &[href^=tel] {
+    color: inherit;
+    text-decoration:inherit;
+  }
+}
+//----------------------------------------------------------//
+//	LINK
+//----------------------------------------------------------//
+a.hover {
+  position: relative;
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+  }
+  &::before {
+    content: '';
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  }
+  &:hover:before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+    transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+  }
+}
+.link-body {
+  color: $body-color;
+}
+//----------------------------------------------------------//
+//	TYPOGRAPHY
+//----------------------------------------------------------//
+h1 {
+  line-height: $h1-line-height;
+}
+h2 {
+  line-height: $h2-line-height;
+}
+h3 {
+  line-height: $h3-line-height;
+}
+h4 {
+  line-height: $h4-line-height;
+}
+h5 {
+  line-height: $h5-line-height;
+}
+h6 {
+  line-height: $h6-line-height;
+}
+.display-1,
+.display-2,
+.display-3 {
+  line-height: 1.15;
+}
+.display-4 {
+  line-height: 1.2;
+}
+.display-5,
+.display-6 {
+  line-height: 1.25;
+}
+.blockquote,
+.lead {
+  line-height: 1.6;
+}
+.blockquote {
+  margin-bottom: 1.5rem;
+}
+.dropcap {
+  display: block;
+  float: left;
+  @include font-size(2.5rem);
+  line-height: 1;
+  font-weight: 500;
+  padding: 0;
+  margin: 0.2rem 0.6rem 0 0;
+}
+.unordered-list {
+  @include list-unstyled();
+  li {
+    position: relative;
+    padding-left: 1rem;
+  }
+  > li:before {
+    font-family: sans-serif;
+    position: absolute;
+    top: -0.15rem;
+    left: 0;
+    @include font-size(1rem);
+    content: $icon-dot;
+  }
+  @each $color,
+  $value in $colors {
+    &.bullet-#{$color} li:before {
+      color: $value;
+    }
+  }
+}
+.icon-list {
+  @include list-unstyled();
+  li {
+    position: relative;
+    padding-left: 1.1rem;
+  }
+  @each $color,
+  $value in $colors {
+    &.bullet-#{$color} i {
+      color: $value;
+    }
+  }
+  i {
+    position: absolute;
+    top: -0.15rem;
+    left: -0.25rem;
+    @include font-size(1rem);
+  }
+}
+//----------------------------------------------------------//
+//	SECTIONS
+//----------------------------------------------------------//
+section > .container > .card {
+  background: rgba($bg, 0.9);
+  > .card-body {
+    padding: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  section > .container > .card > .card-body {
+    padding: 3.2rem;
+  }
+}
+//----------------------------------------------------------//
+//	BADGE
+//----------------------------------------------------------//
+.badge {
+  padding-bottom: $badge-padding-y + 0.1em;
+}
+.badge.bg-dark {
+  background-color: $badge-dark !important;
+  color: $white !important;
+}
+//----------------------------------------------------------//
+//	CLOSE BUTTON
+//----------------------------------------------------------//
+.btn-close {
+  background: none;
+  &:before {
+    font-family: $font-family-unicons;
+    content: $icon-close;
+    transition: background 0.2s ease-in-out;
+  }
+}
+.btn.btn-circle.btn-close {
+  @include font-size($btn-close-font-size);
+  transform: none;
+  font-weight: normal;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+//----------------------------------------------------------//
+//	ICON
+//----------------------------------------------------------//
+.icon {
+  line-height: 1;
+}
+//----------------------------------------------------------//
+//	SWIPER
+//----------------------------------------------------------//
+.swiper-container.swiper-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: $bg;
+  .swiper-slide {
+    height: 100vh;
+    min-width: 100vw;
+    background: $bg;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+}
+//----------------------------------------------------------//
+//	ISOTOPE
+//----------------------------------------------------------//
+.isotope-filter {
+  position: relative;
+  z-index: 5;
+}
+.filter {
+  p {
+    margin: 0 1rem 0 0;
+    display: inline;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+    li {
+      display: inline;
+      margin: 0 0.8rem;
+      text-transform: uppercase;
+      @include font-size(0.7rem);
+      font-weight: $btn-font-weight;
+      letter-spacing: $btn-letter-spacing;
+      color: $body-color;
+      a {
+        cursor: pointer;
+        color: inherit;
+        &.active,
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+    }
+  }
+}
+figure {
+  margin: 0;
+  padding: 0; 
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+  }
+}
+//----------------------------------------------------------//
+//	ROUNDED
+//----------------------------------------------------------//
+.rounded img {
+  @include border-radius($border-radius);
+}
+//----------------------------------------------------------//
+//	NAV TABS
+//----------------------------------------------------------//
+.nav-tabs .nav-link {
+  background: $nav-tabs-link-active-bg;
+  transition: $link-transition;
+  @include font-size(0.85rem);
+  padding: 0.6rem 1.3rem;
+  i {
+    @include font-size(1rem);
+  }
+}
+.nav-tabs.nav-tabs-basic {
+  .nav-link {
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: transparent;
+    background: transparent;
+    @include font-size(0.85rem);
+    padding: 0.6rem 0;
+    margin-right: 1rem;
+    &:hover,
+    &:focus {
+      border-color: $nav-tabs-link-active-color;
+    }
+  }
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    border-color: $nav-tabs-link-active-color;
+  }
+}
+.tab-content {
+  margin-top: 1.2rem;
+}
+//----------------------------------------------------------//
+//	ACCORDION
+//----------------------------------------------------------//
+.accordion-button {
+  border-top: $nav-tabs-border-width solid $nav-tabs-border-color;
+  font-weight: $nav-link-font-weight;
+  @include font-size($nav-link-font-size);
+  &:after {
+    font-family: $font-family-unicons;
+    content: $icon-caret-up;
+    @include font-size(1.15rem);
+    font-weight: normal;
+    background: none;
+    width: 0.85rem;
+    height: auto;
+  }
+  &.collapsed {
+    &:after {
+      content: $icon-caret-down;
+    }
+  }
+  &:not(.collapsed) {
+    color: $accordion-button-active-color;
+    box-shadow: none;
+    &::after {
+      background: none;
+      transform: none;
+    }
+  }
+}
+.accordion-item {
+  border: 0;
+}
+.accordion-item:first-child .accordion-button {
+  border-top-color: transparent;
+}
+.accordion-flush .accordion-body {
+  padding-top: 0;
+}
+//----------------------------------------------------------//
+//	OVERLAP GRID
+//----------------------------------------------------------//
+.overlap-grid {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .overlap-grid-2 .item:nth-child(1) {
+    width: 70%;
+    margin-top: 0;
+    margin-left: 30%;
+    z-index: 3;
+  }
+  .overlap-grid-2 .item:nth-child(2) {
+    width: 55%;
+    margin-top: -45%;
+    margin-left: 0;
+    z-index: 4;
+  }
+  .overlap-grid-2 .item:nth-child(3) {
+    width: 60%;
+    margin-top: -35%;
+    margin-left: 40%;
+    z-index: 2;
+  }
+}
+@media (max-width: 767px) {
+  .overlap-grid-2 .item {
+    width: 100%;
+  }
+  .overlap-grid-2 .item+.item {
+    margin-top: 1.5rem;
+  }
+}
+//----------------------------------------------------------//
+//	LOADER
+//----------------------------------------------------------//
+.gloader {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: -1.25rem;
+  margin-left: -1.25rem;
+  background: none;
+  border: 4px solid $white;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 50%;
+  animation: loader-scale 1s ease-out infinite;
+}
+@keyframes loader-scale {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0;
+  }
+}
+//----------------------------------------------------------//
+//	FORMS
+//----------------------------------------------------------//
+.form-control,
+.form-select {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.form-select {
+  padding: 0 0 0.65rem;
+}
+.form-check-input {
+  margin-top: 0.2rem;
+}
+.form-control.is-invalid:focus, 
+.was-validated .form-control:invalid:focus,
+.form-control.is-valid:focus, 
+.was-validated .form-control:valid:focus,
+.form-select.is-invalid:focus, 
+.was-validated .form-select:invalid:focus,
+.form-select.is-valid:focus, 
+.was-validated .form-select:valid:focus {
+  box-shadow: none;
+}
+//----------------------------------------------------------//
+//	MISC
+//----------------------------------------------------------//
+code.doc {
+  @extend .badge;
+  vertical-align: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.35em;
+  margin: 0.3em;
+}
+//----------------------------------------------------------//
+//	GLYPHS
+//----------------------------------------------------------//
+.glyphs {
+  i {
+    font-size: 2rem;
+    color: $headings-color;
+  }
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    p {
+      margin: 0 0 0 1rem;
+      font-size: 0.75rem;
+    }
+  }
+}
+//----------------------------------------------------------//
+//	UTILITIES
+//----------------------------------------------------------//
+.ls-lg {
+  letter-spacing: $letter-spacing-lg !important;
+}
+.fs-sm {
+  @include font-size($font-size-sm !important);
+}
+.fs-lg {
+  @include font-size($font-size-lg !important);
+}
+@for $i from 1 through 200 {
+  .fs-#{$i} {
+    @include font-size(0.05rem*$i !important);
+  }
+}

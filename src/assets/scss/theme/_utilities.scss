@@ -1,0 +1,18 @@
+//----------------------------------------------------------//
+//	UTILITIES
+//----------------------------------------------------------//
+$utilities: map-merge($utilities,
+  ("width": map-merge(map-get($utilities, "width"),
+      (values: map-merge(map-get(map-get($utilities, "width"), "values"),
+          $spacers,
+        ),
+      ),
+    ),
+    "height": map-merge(map-get($utilities, "height"),
+      (values: map-merge(map-get(map-get($utilities, "height"), "values"),
+          $spacers,
+        ),
+      ),
+    ),
+    "font-size": null,
+  ));

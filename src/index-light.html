@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('_head.html', {
+    "light": true
+  })
+  <link rel="stylesheet" href="@@webRoot/assets/css/colors/blue.css">
+</head>
+<body class="onepage" data-bs-spy="scroll" data-bs-target=".navbar-collapse .navbar-nav">
+  <div class="content-wrapper">
+    @@include('_navbar.html', {
+      "onePage": true,
+      "light": true,
+      "page": "home"
+    })
+    <section id="home">
+      <div class="container vh-100 d-flex flex-column align-items-center justify-content-center" data-cues="slideInDown" data-group="hero">
+        <h2 class="fs-16 ls-lg text-uppercase mb-5">Street & Nature Photographer</h2>
+        <h1 class="display-1 mb-8">Kaylee Rosemary</h1>
+        <span><a href="#portfolio" class="btn btn-lg btn-dark scroll">View My Work</a></span>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container pt-7 pb-15">
+        <div class="card">
+          <div class="card-body">
+            <div class="row gx-md-8 gx-xl-10 gy-8">
+              <div class="col-lg-5">
+                <figure class="rounded"><img class="img-fluid" src="@@webRoot/assets/img/photos/about.jpg" srcset="@@webRoot/assets/img/photos/about@2x.jpg 2x" alt=""></figure>
+              </div>
+              <!-- /column -->
+              <div class="col-lg-7">
+                <h2 class="mb-3">Life is an adventure. Capture every minute.</h2>
+                <p class="lead mb-7">I'm Kaylee, a street and nature photographer. My passion is taking photos of the most stunning places around the world.</p>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h3 class="h4 mb-3">A Little About Me</h3>
+                    <p>
+                      <span class="dropcap">N</span>
+                      ulla vitae elit libero, a pharetra augue. Dapuis mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus.</p>
+                  </div>
+                  <!-- /column -->
+                  <div class="col-lg-6">
+                    <h3 class="h4 mb-3">My Equipment</h3>
+                    <ul class="unordered-list bullet-primary">
+                      <li>Canon Eos 5D Mark IV 24-105mm</li>
+                      <li>Manfrotto Compact Tripod</li>
+                      <li>DJI Ronin MX 3-Axis Gimbal Stabilizer</li>
+                      <li>Wondlan Wer01 Slider Time Lapse</li>
+                      <li>Canon EF100-400MM Lens</li>
+                      <li>Nikon D5 24-70mm F2.8</li>
+                      <li>Nikon Af-S 24Mm F/1.4G Ed Lens</li>
+                      <li>Wondlan Sniper Sn 2.1 Wf Wireless Dslr</li>
+                    </ul>
+                  </div>
+                  <!-- /column -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+    </section>
+    <section id="portfolio">
+      <div class="container pt-7 pb-15">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-7 mx-auto">
+                <h2 class="mb-3 text-center">My Portfolio</h2>
+                <p class="lead mb-10 text-center px-xxl-12">I absolutely love shooting undiscovered places around the world. Someday maybe outside...</p>
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+            <div class="grid grid-view">
+              <div class="isotope-filter filter mb-8 text-center">
+                <ul>
+                  <li><a class="filter-item active" data-filter="*">All</a></li>
+                  <li><a class="filter-item" data-filter=".foods">Foods</a></li>
+                  <li><a class="filter-item" data-filter=".drinks">Drinks</a></li>
+                  <li><a class="filter-item" data-filter=".events">Events</a></li>
+                  <li><a class="filter-item" data-filter=".pastries">Pastries</a></li>
+                </ul>
+              </div>
+              <div class="row gx-md-6 gy-6 isotope">
+                <div class="item col-md-6 col-xl-4 drinks events">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p1-full.jpg" data-glightbox="title: Pellentesque Bibendum Vestibulum; description: Praesent commodo cursus magna, vel scelerisque nisl consectetur." data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p1.jpg" srcset="@@webRoot/assets/img/photos/p1@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 events">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p2-full.jpg" data-glightbox="title: Porta Pellentesque Sem" data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p2.jpg" srcset="@@webRoot/assets/img/photos/p2@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 drinks foods">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p3-full.jpg" data-glightbox data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p3.jpg" srcset="@@webRoot/assets/img/photos/p3@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 events">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p4-full.jpg" data-glightbox data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p4.jpg" srcset="@@webRoot/assets/img/photos/p4@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 pastries events">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p5-full.jpg" data-glightbox data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p5.jpg" srcset="@@webRoot/assets/img/photos/p5@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 foods">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p6-full.jpg" data-glightbox data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p6.jpg" srcset="@@webRoot/assets/img/photos/p6@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 foods drinks">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p7-full.jpg" data-glightbox data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p7.jpg" srcset="@@webRoot/assets/img/photos/p7@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 pastries">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p8-full.jpg" data-glightbox data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p8.jpg" srcset="@@webRoot/assets/img/photos/p8@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 events">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p9-full.jpg" data-glightbox data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p9.jpg" srcset="@@webRoot/assets/img/photos/p9@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 foods">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p10-full.jpg" data-glightbox data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p10.jpg" srcset="@@webRoot/assets/img/photos/p10@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 drinks">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p11-full.jpg" data-glightbox data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p11.jpg" srcset="@@webRoot/assets/img/photos/p11@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 drinks">
+                  <figure class="overlay rounded"><a href="@@webRoot/assets/img/photos/p12-full.jpg" data-glightbox data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p12.jpg" srcset="@@webRoot/assets/img/photos/p12@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4 drinks events">
+                  <figure class="overlay rounded"><a href="https://www.youtube.com/watch?v=rETpXdTbAzo" data-glightbox data-gallery="g-portfolio"> <img src="@@webRoot/assets/img/photos/p13.jpg" srcset="@@webRoot/assets/img/photos/p13@2x.jpg 2x" alt="" /></a>
+                    <figcaption><i class="si-photo_aperture"></i></figcaption>
+                  </figure>
+                </div>
+                <!-- /.item -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.grid -->
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+    </section>
+    <section id="gallery">
+      <div class="container pt-7 pb-15">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="mb-3 text-center">My Gallery</h2>
+            <p class="lead mb-10 text-center px-xl-12">Here are some of the best places around the world.</p>
+            <div class="grid grid-view">
+              <div class="row gx-md-6 gy-6 isotope">
+                <div class="item col-md-6 col-xl-4">
+                  <figure class="overlay rounded">
+                    <a href="@@webRoot/assets/img/photos/an1.jpg" data-glightbox="title: Antarctica" data-gallery="g-antarctica">
+                      <img src="@@webRoot/assets/img/photos/an-th.jpg" srcset="@@webRoot/assets/img/photos/an-th@2x.jpg 2x" alt="" />
+                    </a>
+                    <figcaption>
+                      <h4 class="from-top h6 mb-0">Antarctica</h4>
+                    </figcaption>
+                  </figure>
+                  <ul class="d-none">
+                    <li><a href="@@webRoot/assets/img/photos/an2.jpg" data-glightbox="title: Antarctica" data-gallery="g-antarctica"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/an3.jpg" data-glightbox="title: Antarctica" data-gallery="g-antarctica"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/an4.jpg" data-glightbox="title: Antarctica" data-gallery="g-antarctica"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/an5.jpg" data-glightbox="title: Antarctica" data-gallery="g-antarctica"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/an6.jpg" data-glightbox="title: Antarctica" data-gallery="g-antarctica"></a></li>
+                  </ul>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4">
+                  <figure class="overlay rounded">
+                    <a href="@@webRoot/assets/img/photos/au1.jpg" data-glightbox="title: Australia" data-gallery="g-australia">
+                      <img src="@@webRoot/assets/img/photos/au-th.jpg" srcset="@@webRoot/assets/img/photos/au-th@2x.jpg 2x" alt="" />
+                    </a>
+                    <figcaption>
+                      <h4 class="from-top h6 mb-0">Australia</h4>
+                    </figcaption>
+                  </figure>
+                  <ul class="d-none">
+                    <li><a href="@@webRoot/assets/img/photos/au2.jpg" data-glightbox="title: Australia" data-gallery="g-australia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/au3.jpg" data-glightbox="title: Australia" data-gallery="g-australia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/au4.jpg" data-glightbox="title: Australia" data-gallery="g-australia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/au5.jpg" data-glightbox="title: Australia" data-gallery="g-australia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/au6.jpg" data-glightbox="title: Australia" data-gallery="g-australia"></a></li>
+                  </ul>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4">
+                  <figure class="overlay rounded">
+                    <a href="@@webRoot/assets/img/photos/eg1.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt">
+                      <img src="@@webRoot/assets/img/photos/eg-th.jpg" srcset="@@webRoot/assets/img/photos/eg-th@2x.jpg 2x" alt="" />
+                    </a>
+                    <figcaption>
+                      <h4 class="from-top h6 mb-0">Egypt</h4>
+                    </figcaption>
+                  </figure>
+                  <ul class="d-none">
+                    <li><a href="@@webRoot/assets/img/photos/eg2.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/eg3.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/eg4.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/eg5.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/eg6.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt"></a></li>
+                  </ul>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4">
+                  <figure class="overlay rounded">
+                    <a href="@@webRoot/assets/img/photos/sc1.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia">
+                      <img src="@@webRoot/assets/img/photos/sc-th.jpg" srcset="@@webRoot/assets/img/photos/sc-th@2x.jpg 2x" alt="" />
+                    </a>
+                    <figcaption>
+                      <h4 class="from-top h6 mb-0">Scandinavia</h4>
+                    </figcaption>
+                  </figure>
+                  <ul class="d-none">
+                    <li><a href="@@webRoot/assets/img/photos/sc2.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/sc3.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/sc4.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/sc5.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/sc6.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia"></a></li>
+                  </ul>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4">
+                  <figure class="overlay rounded">
+                    <a href="@@webRoot/assets/img/photos/aa1.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia">
+                      <img src="@@webRoot/assets/img/photos/aa-th.jpg" srcset="@@webRoot/assets/img/photos/aa-th@2x.jpg 2x" alt="" />
+                    </a>
+                    <figcaption>
+                      <h4 class="from-top h6 mb-0">Anatolia</h4>
+                    </figcaption>
+                  </figure>
+                  <ul class="d-none">
+                    <li><a href="@@webRoot/assets/img/photos/aa2.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/aa3.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/aa4.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/aa5.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/aa6.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia"></a></li>
+                  </ul>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-xl-4">
+                  <figure class="overlay rounded">
+                    <a href="@@webRoot/assets/img/photos/br1.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil">
+                      <img src="@@webRoot/assets/img/photos/br-th.jpg" srcset="@@webRoot/assets/img/photos/br-th@2x.jpg 2x" alt="" />
+                    </a>
+                    <figcaption>
+                      <h4 class="from-top h6 mb-0">Brazil</h4>
+                    </figcaption>
+                  </figure>
+                  <ul class="d-none">
+                    <li><a href="@@webRoot/assets/img/photos/br2.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/br3.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/br4.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/br5.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil"></a></li>
+                    <li><a href="@@webRoot/assets/img/photos/br6.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil"></a></li>
+                  </ul>
+                </div>
+                <!-- /.item -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.grid -->
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+    </section>
+    <section id="services">
+      <div class="container pt-7 pb-15">
+        <div class="card">
+          <div class="card-body">
+            <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+              <div class="col-lg-6 position-relative order-lg-2">
+                <div class="overlap-grid overlap-grid-2">
+                  <div class="item">
+                    <figure class="rounded shadow"><img src="@@webRoot/assets/img/photos/s1.jpg" srcset="@@webRoot/assets/img/photos/s1@2x.jpg 2x" alt=""></figure>
+                  </div>
+                  <div class="item">
+                    <figure class="rounded shadow"><img src="@@webRoot/assets/img/photos/s2.jpg" srcset="@@webRoot/assets/img/photos/s2@2x.jpg 2x" alt=""></figure>
+                  </div>
+                </div>
+              </div>
+              <!--/column -->
+              <div class="col-lg-6">
+                <h2 class="mb-3">My Services</h2>
+                <p class="lead mb-7">I'd like to give you a unique photography experience, capture your products with excellent composition.</p>
+                <div class="d-flex flex-row mb-5">
+                  <div>
+                    <div class="icon fs-44 text-dark mt-1 me-5"><i class="si-photo_camera"></i></div>
+                  </div>
+                  <div>
+                    <h3 class="h4 mb-1">Photography</h3>
+                    <p class="mb-0">Curabitur blandit lacus porttitor ridiculus mus. Morbi leo consectetur porta ac vestibulum at eros sit amet non.</p>
+                  </div>
+                </div>
+                <div class="d-flex flex-row mb-5">
+                  <div>
+                    <div class="icon fs-44 text-dark mt-1 me-5"><i class="si-photo_magic-tools"></i></div>
+                  </div>
+                  <div>
+                    <h3 class="h4 mb-1">Retouch</h3>
+                    <p class="mb-0">Curabitur blandit lacus porttitor ridiculus mus. Morbi leo consectetur porta ac vestibulum at eros sit amet non.</p>
+                  </div>
+                </div>
+                <div class="d-flex flex-row">
+                  <div>
+                    <div class="icon fs-44 text-dark mt-1 me-5"><i class="si-seo_video-marketing"></i></div>
+                  </div>
+                  <div>
+                    <h3 class="h4 mb-1">Filming</h3>
+                    <p class="mb-0">Curabitur blandit lacus porttitor ridiculus mus. Morbi leo consectetur porta ac vestibulum at eros sit amet non.</p>
+                  </div>
+                </div>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container pt-7 pb-15">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="mb-3">Get In Touch</h2>
+            <p class="lead mb-10">Got any questions? Don't hesitate to get in touch.</p>
+            <div class="row gy-10 gx-lg-8 gx-xl-12">
+              <div class="col-lg-8">
+                <form class="contact-form needs-validation" method="post" action="@@webRoot/assets/php/contact.php" novalidate>
+                  <div class="messages"></div>
+                  <div class="row gx-4">
+                    <div class="col-md-6">
+                      <div class="form-floating mb-6">
+                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
+                        <label for="form_name">First Name *</label>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                          Please enter your first name.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-md-6">
+                      <div class="form-floating mb-6">
+                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe" required>
+                        <label for="form_lastname">Last Name *</label>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                          Please enter your last name.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-md-6">
+                      <div class="form-floating mb-6">
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="jane.doe@example.com" required>
+                        <label for="form_email">Email *</label>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                          Please provide a valid email address.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-md-6">
+                      <div class="form-select-wrapper mb-6">
+                        <select class="form-select" id="form-select" name="subject-select" required>
+                          <option selected disabled value="">Select a subject</option>
+                          <option value="Question">Question</option>
+                          <option value="Pricing">Pricing</option>
+                          <option value="Other">Other</option>
+                        </select>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                          Please select a department.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-12">
+                      <div class="form-floating mb-6">
+                        <textarea id="form_message" name="message" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
+                        <label for="form_message">Message *</label>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                          Please enter your messsage.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-12">
+                      <div class="form-check mb-6">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                          I agree to <a href="#" class="hover">terms and policy</a>.
+                        </label>
+                        <div class="invalid-feedback">
+                          You must agree before submitting.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-12">
+                      <input type="submit" class="btn btn-dark btn-send" value="Send message">
+                    </div>
+                    <!-- /column -->
+                  </div>
+                  <!-- /.row -->
+                </form>
+                <!-- /form -->
+              </div>
+              <!--/column -->
+              <div class="col-lg-4">
+                <div class="d-flex flex-row">
+                  <div>
+                    <div class="icon text-dark fs-30 me-5 mt-1"> <i class="si-ecommerce_shop-location"></i> </div>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Address</h5>
+                    <address>Moonshine St. 14/05 Light City, London, United Kingdom</address>
+                  </div>
+                </div>
+                <div class="d-flex flex-row">
+                  <div>
+                    <div class="icon text-dark fs-30 me-5 mt-1"> <i class="si-phone_drop-call"></i> </div>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Phone</h5>
+                    <p>00 (123) 456 78 90 <br />00 (987) 654 32 10</p>
+                  </div>
+                </div>
+                <div class="d-flex flex-row">
+                  <div>
+                    <div class="icon text-dark fs-30 me-5 mt-1"> <i class="si-mail_send-arrow"></i> </div>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">E-mail</h5>
+                    <p class="mb-0"><a href="mailto:#" class="link-body">info@locus.com</a></p>
+                  </div>
+                </div>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+            <h2 class="mt-10 mb-8 text-center">Follow Me on Instagram</h2>
+            <div class="grid grid-view position-relative mb-10">
+              <div class="position-absolute mt-3" style="top:50%; left: 50%; z-index:2; transform: translate(-50%,-50%);"><a href="#" class="btn btn-dark"><i class="uil uil-instagram fs-18 me-1"></i> Follow Me</a></div>
+              <div class="row gx-md-6 gy-6 isotope opacity-75">
+                <div class="item col-md-6 col-lg-3"><figure class="rounded"><img src="@@webRoot/assets/img/photos/i1.jpg" srcset="@@webRoot/assets/img/photos/i1@2x.jpg 2x" alt="" /></figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-lg-3"><figure class="rounded"><img src="@@webRoot/assets/img/photos/i2.jpg" srcset="@@webRoot/assets/img/photos/i2@2x.jpg 2x" alt="" /></figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-lg-3"><figure class="rounded"><img src="@@webRoot/assets/img/photos/i3.jpg" srcset="@@webRoot/assets/img/photos/i3@2x.jpg 2x" alt="" /></figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-lg-3"><figure class="rounded"><img src="@@webRoot/assets/img/photos/i4.jpg" srcset="@@webRoot/assets/img/photos/i4@2x.jpg 2x" alt="" /></figure>
+                </div>
+                <!-- /.item -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.grid -->
+            @@include('_footer.html')
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!--/.container -->
+    </section>
+    @@include('_bg.html', {
+      "light": true
+    })
+  </div>
+  <!-- /.content-wrapper -->
+  @@include('_scripts.html')
+</body>
+</html>

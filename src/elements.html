@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('_head.html')
+</head>
+<body>
+  <div class="content-wrapper">
+    @@include('_navbar.html', {
+      "page": "features"
+    })
+    <section>
+      <div class="container pt-7 pb-15">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-8 mx-auto text-center">
+                <h2 class="mb-10">Elements</h2>
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+            <a href="#" class="btn btn-red me-2 mb-2">Button</a>
+            <a href="#" class="btn btn-pink me-2 mb-2">Button</a>
+            <a href="#" class="btn btn-purple me-2 mb-2">Button</a>
+            <a href="#" class="btn btn-blue me-2 mb-2">Button</a>
+            <a href="#" class="btn btn-green me-2 mb-2">Button</a>
+            <a href="#" class="btn btn-yellow me-2 mb-2">Button</a>
+            <a href="#" class="btn btn-white me-2 mb-2">Button</a>
+            <a href="#" class="btn btn-dark me-2 mb-2">Button</a>
+            <div class="mb-5"></div>
+            <a href="#" class="btn btn-white btn-lg me-2 mb-2">Large Button</a>
+            <a href="#" class="btn btn-white mb-2">Default Button</a>
+            <hr class="my-14">
+            <span class="badge bg-red rounded-pill me-1">Badge</span>
+            <span class="badge bg-pink rounded-pill me-1">Badge</span>
+            <span class="badge bg-purple rounded-pill me-1">Badge</span>
+            <span class="badge bg-blue rounded-pill me-1">Badge</span>
+            <span class="badge bg-green rounded-pill me-1">Badge</span>
+            <span class="badge bg-yellow rounded-pill me-1">Badge</span>
+            <span class="badge bg-white rounded-pill me-1">Badge</span>
+            <span class="badge bg-dark rounded-pill me-1">Badge</span>
+            <hr class="my-14">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="nav nav-tabs nav-tabs-basic">
+                  <li class="nav-item"> <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Tab #1</a> </li>
+                  <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab2">Tab #2</a> </li>
+                  <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab3">Tab #3</a> </li>
+                </ul>
+                <!-- /.nav-tabs -->
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="tab1">
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <ul class="icon-list bullet-primary mb-0">
+                      <li><i class="uil uil-check"></i>Aenean eu leo quam. Pellentesque ornare.</li>
+                      <li><i class="uil uil-check"></i>Nullam quis risus eget urna mollis ornare.</li>
+                      <li><i class="uil uil-check"></i>Donec id elit non mi porta gravida at eget.</li>
+                      <li><i class="uil uil-check"></i>Fusce dapibus, tellus ac cursus commodo.</li>
+                    </ul>
+                  </div>
+                  <!--/.tab-pane -->
+                  <div class="tab-pane fade" id="tab2">
+                    <p>Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod.</p>
+                    <p class="mb-0">Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus.</p>
+                  </div>
+                  <!--/.tab-pane -->
+                  <div class="tab-pane fade" id="tab3">
+                    <p>Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p class="mb-0">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                  </div>
+                  <!--/.tab-pane -->
+                </div>
+                <!-- /.tab-content -->
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+            <hr class="my-14">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="accordion accordion-flush" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p class="mb-2">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.</p>
+                      </div>
+                      <!-- /.accordion-body -->
+                    </div>
+                    <!-- /.accordion-collapse -->
+                  </div>
+                  <!-- /.accordion-item -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p class="mb-2">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.</p>
+                      </div>
+                      <!-- /.accordion-body -->
+                    </div>
+                    <!-- /.accordion-collapse -->
+                  </div>
+                  <!-- /.accordion-item -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p class="mb-2">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.</p>
+                      </div>
+                      <!-- /.accordion-body -->
+                    </div>
+                    <!-- /.accordion-collapse -->
+                  </div>
+                  <!-- /.accordion-item -->
+                </div>
+                <!-- /.accordion -->
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+        <div class="card mt-6">
+          <div class="card-body py-6">
+            @@include('_footer.html')
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!--/.container -->
+    </section>
+    @@include('_bg.html')
+  </div>
+  <!-- /.content-wrapper -->
+  @@include('_scripts.html')
+</body>
+</html>

@@ -1,0 +1,142 @@
+//----------------------------------------------------------//
+//	NAVBAR
+//----------------------------------------------------------//
+.navbar {
+  width: 100%;
+  z-index: $zindex-sticky;
+  .container {
+    position: relative;
+  }
+  .navbar-collapse {
+    align-items: center;
+  }
+  .navbar-other {
+    .nav-item .nav-link {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      > i {
+        @include font-size(1.1rem);
+      }
+    }
+    .navbar-nav>.nav-item .nav-link {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .navbar-nav>.nav-item+.nav-item {
+      margin-left: 0.8rem;
+    }
+  }
+  .navbar-brand {
+    color: $navbar-dark-brand-color;
+    &:hover,
+    &:focus {
+      color: $navbar-dark-brand-hover-color;
+    }
+  }
+  .navbar-nav {
+    .nav-link {
+      color: white; //$navbar-dark-color;
+      &:hover,
+      &:focus {
+        color: $navbar-dark-hover-color;
+      }
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
+    }
+    .show > .nav-link,
+    .nav-link.active {
+      color: $navbar-dark-active-color;
+    }
+  }
+  .navbar-toggler {
+    color: $navbar-dark-color;
+    border-color: $navbar-dark-toggler-border-color;
+  }
+  .navbar-toggler-icon {
+    background-image: escape-svg($navbar-dark-toggler-icon-bg);
+  }
+  .navbar-text {
+    color: $navbar-dark-color;
+    a,
+    a:hover,
+    a:focus {
+      color: $navbar-dark-active-color;
+    }
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar .navbar-collapse .nav-link {
+    padding-right: 0.7rem;
+    padding-left: 0.7rem;
+  }
+}
+//----------------------------------------------------------//
+//	STICKY NAVBAR
+//----------------------------------------------------------//
+.navbar-clone {
+  position: fixed !important;
+  z-index: 1008;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  @include transition(all 300ms ease-in-out, padding-right 0ms);
+
+  .navbar-nav {
+    .nav-link {
+  color: $navbar-dark-color;
+    }
+}
+}
+.navbar-stick {
+  transform: translateY(0%);
+  box-shadow: none;
+  background: rgba($bg, 0.9);
+  .navbar-brand img {
+    max-height: 2.2rem;
+    width: auto;
+  }
+}
+.navbar-bg {
+  background: rgba($bg, 0.9);
+}
+
+
+//----------------------------------------------------------//
+//	HAMBURGER ICON
+//----------------------------------------------------------//
+button.hamburger {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0 0 0 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $navbar-dark-color;
+  @include transition($link-transition);
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:before, 
+  &:after {
+    content: "";
+  }
+  &:before, span, &:after {
+    width: 1.2rem;
+    height: 0.15rem;
+    @include transition($link-transition);
+    background: currentColor;
+    border-radius: 2rem;
+  }
+  &:before, 
+  span {
+    margin: 0 0 0.25rem;
+  }
+}

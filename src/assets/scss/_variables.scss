@@ -1,0 +1,429 @@
+//----------------------------------------------------------//
+//	OPTIONS
+//----------------------------------------------------------//
+$enable-caret: true !default;
+$enable-rounded: true !default;
+$enable-shadows: true !default;
+$enable-smooth-scroll: false !default;
+$enable-negative-margins: true !default;
+$enable-validation-icons: false !default;
+//----------------------------------------------------------//
+//	SPACING
+//----------------------------------------------------------//
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 0.25), // 5px
+    2: ($spacer * 0.5), // 10px
+    3: ($spacer * 0.75), // 15px
+    4: $spacer, // 20px
+    5: ($spacer * 1.25), // 25px
+    6: ($spacer * 1.5), // 30px
+    7: ($spacer * 1.75), // 35px
+    8: ($spacer * 2), // 40px
+    9: ($spacer * 2.25), // 45px
+    10: ($spacer * 2.5), // 50px
+    11: ($spacer * 3), // 60px
+    12: ($spacer * 3.5), // 70x
+    13: ($spacer * 4), // 80px
+    14: ($spacer * 4.5), // 90px
+    15: ($spacer * 5), // 100px
+    16: ($spacer * 6), // 120px
+    17: ($spacer * 7), // 140px
+    18: ($spacer * 8), // 160px
+    19: ($spacer * 9), // 180px
+    20: ($spacer * 10), // 200px
+    21: ($spacer * 12.5), // 250px
+    22: ($spacer * 15), // 300px
+    23: ($spacer * 17.5), // 350px
+    24: ($spacer * 20), // 400px
+    25: ($spacer * 22.5), // 450px
+  ),
+  $spacers
+);
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
+//----------------------------------------------------------//
+//	COLOR SYSTEM
+//----------------------------------------------------------//
+$primary: $green !default;
+$colors: (
+  "green": $green,
+  "blue": $blue,
+  "pink": $pink,
+  "purple": $purple,
+  "yellow": $yellow,
+  "white": $white,
+  "red": $red,
+  "dark": $dark,
+  "primary": $primary,
+) !default;
+$secondary: $gray-500 !default;
+$success: $green !default;
+$info: $blue !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$theme-colors: map-merge($colors,
+  ("secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+));
+$button-colors: map-remove($colors, "dark") !default;
+$px: #00a6df !default;
+$adobe: #e61f26 !default;
+$android: #97c03d !default;
+$amazon: #f79400 !default;
+$apple: #1a1919 !default;
+$behance: #098ffa !default;
+$blackberry: #272727 !default;
+$blogger: #e86733 !default;
+$bitcoin: #f38633 !default;
+$css3: #006db6 !default;
+$dropbox: #007bdf !default;
+$dribbble: #d07ead !default;
+$github: #4073a6 !default;
+$google: #e44134 !default;
+$googleplay: #24b6be !default;
+$googledrive: #1b9f5e !default;
+$googlehangouts: #109956 !default;
+$facebook: #4470cf !default;
+$facebookmessenger: #007ff8 !default;
+$instagram: #d53581 !default;
+$intercom: #2e88f8 !default;
+$javascript: #f0d91d !default;
+$line: #0fab10 !default;
+$linkedin: #3393c1 !default;
+$mastercard: #f0931d !default;
+$medium: #00c364 !default;
+$opera: #e33737 !default;
+$paypal: #0089cc !default;
+$react: #00d1f7 !default;
+$reddit: #f84300 !default;
+$slack: #d4135c !default;
+$snapchat: #f7c31a !default;
+$swiggy: #f88a2d !default;
+$skype: #2ebbf0 !default;
+$telegram: #2caef0 !default;
+$tumblr: #5d82a4 !default;
+$twitter: #5daed5 !default;
+$youtube: #c8312b !default;
+$visualstudio: #6b61be !default;
+$vuejs: #3fb37f !default;
+$vk: #4f7db3 !default;
+$whatsapp: #00a859 !default;
+$brand-colors: ("dropbox": $dropbox,
+  "dribbble": $dribbble,
+  "google-drive-alt": $googledrive,
+  "facebook-f": $facebook,
+  "instagram": $instagram,
+  "line": $line,
+  "facebook-messenger": $facebookmessenger,
+  "black-berry": $blackberry,
+  "linkedin": $linkedin,
+  "intercom": $intercom,
+  "facebook": $facebook,
+  "youtube": $youtube,
+  "apple": $apple,
+  "visual-studio": $visualstudio,
+  "twitter": $twitter,
+  "snapchat-ghost": $snapchat,
+  "slack": $slack,
+  "tumblr-square": $tumblr,
+  "medium-m": $medium,
+  "tumblr": $tumblr,
+  "adobe": $adobe,
+  "whatsapp": $whatsapp,
+  "500-px": $px,
+  "snapchat-square": $snapchat,
+  "behance": $behance,
+  "instagram-alt": $instagram,
+  "github-alt": $github,
+  "linkedin-alt": $linkedin,
+  "slack-alt": $slack,
+  "google": $google,
+  "google-play": $google,
+  "google-drive": $googledrive,
+  "vuejs-alt": $vuejs,
+  "google-hangouts": $googlehangouts,
+  "vuejs": $vuejs,
+  "java-script": $javascript,
+  "paypal": $paypal,
+  "reddit-alien-alt": $reddit,
+  "android-alt": $android,
+  "github": $github,
+  "android": $android,
+  "amazon": $amazon,
+  "adobe-alt": $adobe,
+  "master-card": $mastercard,
+  "opera-alt": $opera,
+  "css3-alt": $css3,
+  "opera": $opera,
+  "css3": $css3,
+  "twitter-alt": $twitter,
+  "intercom-alt": $intercom,
+  "swiggy": $swiggy,
+  "snapchat-alt": $snapchat,
+  "tumblr-alt": $tumblr,
+  "facebook-messenger-alt": $facebookmessenger,
+  "bitcoin-alt": $bitcoin,
+  "google-hangouts-alt": $googlehangouts,
+  "blogger": $blogger,
+  "blogger-alt": $blogger,
+  "bitcoin": $bitcoin,
+  "behance-alt": $behance,
+  "apple-alt": $apple,
+  "react": $react,
+  "telegram": $telegram,
+  "vk-alt": $vk,
+  "vk": $vk,
+  "skype": $skype,
+  "skype-alt": $skype,
+  "telegram-alt": $telegram,
+) !default;
+//----------------------------------------------------------//
+//	BODY
+//----------------------------------------------------------//
+$body-bg:                   $bg !default;
+$body-color:                $gray-400 !default;
+//----------------------------------------------------------//
+//	LINKS
+//----------------------------------------------------------//
+$link-decoration: none !default;
+$link-color: $primary !default;
+$link-hover-color: $primary !default;
+$link-transition: all 0.2s ease-in-out !default;
+$btn-transition: $link-transition !default;
+//----------------------------------------------------------//
+//	GRID
+//----------------------------------------------------------//
+$gutters: $spacers !default;
+$grid-row-columns: 12 !default;
+//----------------------------------------------------------//
+//	COMPONENTS
+//----------------------------------------------------------//
+$box-shadow: 0 .5rem 1rem rgba($dark, .15) !default;
+$caret-width: 0.25rem !default;
+$caret-vertical-align: -3px !default;
+$caret-spacing: 0.05rem !default;
+$caret-size: 0.85rem !default;
+$caret-end-size: 0.8rem !default;
+$alert-bg-scale: 80% !default;
+$alert-border-scale:  70% !default;
+$alert-color-scale: 90% !default;
+//----------------------------------------------------------//
+//	TYPOGRAPHY
+//----------------------------------------------------------//
+$path-to-fonts: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700' !default;
+$font-family-sans-serif: "Plus Jakarta Sans", sans-serif !default;
+$font-family-unicons: "Unicons" !default;
+$font-size-root: 20px !default;
+$font-size-base: 0.8rem !default;
+$fw-base: 600 !default;
+$headings-font-weight: $fw-base !default;
+$headings-color: $white !default;
+$display-font-weight: $fw-base !default;
+$letter-spacing-lg: 0.15rem !default;
+$line-height-base: 1.75 !default;
+$h1-font-size: 1.9rem !default;
+$h2-font-size: 1.5rem !default;
+$h3-font-size: 1.1rem !default;
+$h4-font-size: 1rem !default;
+$h5-font-size: 0.9rem !default;
+$h6-font-size: 0.85rem !default;
+$h1-line-height: 1.25 !default;
+$h2-line-height: 1.3 !default;
+$h3-line-height: 1.4 !default;
+$h4-line-height: 1.45 !default;
+$h5-line-height: 1.5 !default;
+$h6-line-height: 1.55 !default;
+$display-font-sizes: (1: 3.8rem,
+  2: 3.4rem,
+  3: 3rem,
+  4: 2.6rem,
+  5: 2.2rem,
+  6: 1.8rem,
+) !default;
+$lead-font-size: 1.1rem !default;
+$lead-font-weight: 400 !default;
+$text-muted: $gray-500 !default;
+$blockquote-font-size: 1.1rem !default;
+$blockquote-footer-color: $text-muted !default;
+$small-font-size: .95em !default;
+$hr-color: $border !default;
+$hr-opacity: 1 !default;
+//----------------------------------------------------------//
+//	BUTTONS
+//----------------------------------------------------------//
+$border-width: 1px !default;
+$btn-box-shadow: unset !default;
+$btn-active-box-shadow: unset !default;
+$btn-font-weight: $fw-base !default;
+$btn-letter-spacing: 0.025rem !default;
+$input-btn-padding-y: 0.6rem !default;
+$input-btn-padding-x: 1rem !default;
+$input-btn-font-size: 0.7rem !default;
+$input-btn-padding-y-lg: 0.75rem !default;
+$input-btn-padding-x-lg: 1.2rem !default;
+$input-btn-font-size-lg: 0.7rem !default;
+$btn-padding-y-lg: $input-btn-padding-y-lg !default;
+$btn-padding-x-lg: $input-btn-padding-x-lg !default;
+$btn-font-size-lg: $input-btn-font-size-lg !default;
+$input-btn-line-height: $line-height-base !default;
+$input-btn-border-width: $border-width !default;
+$badge-color: $gray-700 !default;
+$badge-padding-y: .3em !default;
+$badge-padding-x: .65em !default;
+$badge-font-size: .75em !default;
+$code-color: $headings-color !default;
+$code-font-size: $small-font-size !default;
+//----------------------------------------------------------//
+//	FORMS
+//----------------------------------------------------------//
+$input-padding-y: 0 !default;
+$input-padding-x: 0 !default;
+//$input-font-size: 0.7rem !default;
+$input-color: $body-color !default;
+$input-border-radius: 0 !default;
+$input-bg: transparent !default;
+$input-line-height: $input-btn-line-height !default;
+$input-box-shadow: unset !default;
+$input-focus-box-shadow: unset !default;
+$input-border-width: $input-btn-border-width !default;
+$input-height-border: $input-border-width * 2 !default;
+$input-height-inner-half: 0.95rem !default;
+$form-check-input-width: 1.05rem !default;
+$form-check-padding-start: $form-check-input-width + .5rem !default;
+$form-check-input-bg: transparent !default;
+$form-check-input-border: 1px solid $body-color !default;
+$form-check-input-checked-color: $headings-color !default;
+$form-check-input-checked-bg-color: $primary !default;
+$form-check-input-checked-border-color: $form-check-input-checked-bg-color !default;
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='1.5' fill='#{$form-check-input-checked-color}'/></svg>") !default;
+$form-check-input-focus-border: $body-color !default;
+$form-check-input-focus-box-shadow: none !default;
+$form-select-font-size: 0.8rem !default;
+$form-select-focus-box-shadow: unset !default;
+$form-select-line-height: $input-line-height !default;
+$form-select-bg-size: 20px 20px !default;
+$form-select-box-shadow: unset !default;
+$form-select-indicator-color: $body-color !default;
+$form-select-indicator: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath fill='#{$form-select-indicator-color}' d='M22.667 12.227c-0.241-0.24-0.573-0.388-0.94-0.388s-0.699 0.148-0.94 0.388l0-0-4.787 4.72-4.72-4.72c-0.241-0.24-0.573-0.388-0.94-0.388s-0.699 0.148-0.94 0.388l0-0c-0.244 0.242-0.394 0.577-0.394 0.947s0.151 0.705 0.394 0.947l5.653 5.653c0.242 0.244 0.577 0.394 0.947 0.394s0.705-0.151 0.947-0.394l0-0 5.72-5.653c0.244-0.242 0.394-0.577 0.394-0.947s-0.151-0.705-0.394-0.947l-0-0z'%3E%3C/path%3E%3C/svg%3E") !default;
+$form-select-bg-position: right 0.2rem !default;
+$form-select-feedback-icon-position: right 1rem center !default;
+$form-floating-height: 2.1rem !default;
+$form-floating-line-height: 1.25 !default;
+$form-floating-padding-x: $input-padding-x !default;
+$form-floating-padding-y: $input-padding-y !default;
+$form-floating-input-padding-t: 0.8rem !default;
+$form-floating-input-padding-b: 0.6rem !default;
+$form-floating-label-opacity: 1 !default;
+$form-floating-label-transform: scale(.8) translateY(-.8rem) translateX(0) !default;
+//----------------------------------------------------------//
+// NAV
+//----------------------------------------------------------//
+$nav-link-padding-y: 1.6rem !default;
+$nav-link-padding-x: 1.6rem !default;
+$nav-link-font-size: 0.85rem !default;
+$nav-link-font-weight: $fw-base !default;
+$nav-link-color: $headings-color !default;
+$nav-tabs-border-color: $border !default;
+$nav-tabs-link-hover-border-color: transparent !default;
+$nav-tabs-link-active-color: $primary !default;
+$nav-tabs-link-active-bg: $headings-color !default;
+$nav-tabs-link-active-border-color: $body-color !default;
+//----------------------------------------------------------//
+// NAVBAR
+//----------------------------------------------------------//
+$navbar-padding-y: 0 !default;
+$navbar-brand-padding-y: 0 !default;
+$navbar-brand-margin-end: 0 !default;
+$navbar-dark-color: $headings-color !default;
+$navbar-dark-hover-color: $link-hover-color !default;
+$navbar-dark-active-color: $navbar-dark-hover-color !default;
+$navbar-nav-link-padding-x: 1rem !default;
+//----------------------------------------------------------//
+//	DROPDOWN
+//----------------------------------------------------------//
+$dropdown-min-width: 10rem !default;
+$dropdown-padding-x: 0 !default;
+$dropdown-padding-y: 1rem !default;
+$dropdown-padding-y-sm: 0.65rem !default;
+$dropdown-spacer: 0.75rem !default;
+$dropdown-font-size: $nav-link-font-size - 0.05 !default;
+$dropdown-color: $link-color !default;
+$dropdown-bg: $bg !default;
+$dropdown-divider-margin-y: $spacer * .5 !default;
+$dropdown-border-width: 0 !default;
+$dropdown-box-shadow: none !default;
+$dropdown-transition: all 0.25s ease-in-out !default;
+$dropdown-link-color: $headings-color !default;
+$dropdown-link-hover-color: $link-hover-color !default;
+$dropdown-link-hover-bg: inherit !default;
+$dropdown-link-active-color: $link-hover-color !default;
+$dropdown-link-active-bg: inherit !default;
+$dropdown-item-padding-y: 0.2rem !default;
+$dropdown-item-padding-x: 1.5rem !default;
+$dropdown-header-color: $link-color !default;
+$dropdown-header-padding-x: $dropdown-item-padding-x !default;
+$dropdown-header-padding-y: $dropdown-padding-y * .5 !default;
+//----------------------------------------------------------//
+//	CARD
+//----------------------------------------------------------//
+$card-border-width: 0 !default;
+//----------------------------------------------------------//
+//	ACCORDION
+//----------------------------------------------------------//
+$accordion-padding-x: 0 !default;
+$accordion-bg: transparent !default;
+$accordion-button-color: $nav-link-color !default;
+$accordion-button-active-bg: transparent !default;
+$accordion-button-active-color: $accordion-button-color !default;
+$accordion-icon-width:  0.6rem !default;
+$accordion-border-radius: 0 !default;
+$accordion-inner-border-radius: 0 !default;
+$accordion-button-focus-box-shadow: unset !default;
+$accordion-button-focus-border-color: $nav-tabs-border-color !default;
+//----------------------------------------------------------//
+//	OFFCANVAS
+//----------------------------------------------------------//
+$offcanvas-padding-y: 1.5rem !default;
+$offcanvas-padding-x: 1.5rem !default;
+$offcanvas-horizontal-width: 15rem !default;
+$offcanvas-vertical-height: 30vh !default;
+$offcanvas-transition-duration: .3s !default;
+$offcanvas-border-color: transparent !default;
+$offcanvas-border-width: 0 !default;
+$offcanvas-title-line-height: 1 !default;
+$offcanvas-bg-color: $bg !default;
+$offcanvas-color: $body-color !default;
+$offcanvas-box-shadow: none !default;
+$offcanvas-backdrop-bg: $bg !default;
+$offcanvas-backdrop-opacity: 0.7 !default;
+//----------------------------------------------------------//
+//	CLOSE
+//----------------------------------------------------------//
+$btn-close-font-size: 1.05rem !default;
+$btn-close-opacity: 1 !default;
+$btn-close-hover-opacity: 1 !default;
+$btn-close-focus-shadow: none !default;
+//----------------------------------------------------------//
+//	LIGHTBOX
+//----------------------------------------------------------//
+$lightbox-bg: rgba($gray-800, 0.9) !default;
+$lightbox-icon-color: $white !default;
+$lightbox-icon-bg: rgba($dark, 0.6) !default;
+$lightbox-icon-hover-bg: rgba($dark, 0.7) !default;
+//----------------------------------------------------------//
+//	ICONS
+//----------------------------------------------------------//
+$icon-caret-start: "\e92f" !default;
+$icon-caret-end: "\e931" !default;
+$icon-caret-up: "\e932" !default;
+$icon-caret-down: "\e92d" !default;
+$icon-dot: "\2022" !default;
+$icon-close: "\ed3b" !default;
+$icon-prev: "\e949" !default;
+$icon-next: "\e94c" !default;
