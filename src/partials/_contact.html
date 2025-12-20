@@ -1,0 +1,177 @@
+<section id="contact">
+      <div class="container pt-7 pb-15">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="mb-3">Contact</h2>
+            <p class="lead mb-10">Heb je vragen? Aarzel niet om ons te contacteren.</p>
+            <div class="row gy-10 gx-lg-8 gx-xl-12">
+              <div class="col-lg-8">
+                <form class="contact-form needs-validation" method="post" action="@@webRoot/assets/php/contact.php"
+                  novalidate>
+                  <div class="messages"></div>
+                  <div class="row gx-4">
+                    <div class="col-md-6">
+                      <div class="form-floating mb-6">
+                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
+                        <label for="form_name">Voornaam *</label>
+                        <div class="valid-feedback">
+                          Dankuwel!
+                        </div>
+                        <div class="invalid-feedback">
+                          Gelieve uw voornaam in te geven.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-md-6">
+                      <div class="form-floating mb-6">
+                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe"
+                          required>
+                        <label for="form_lastname">Achternaam *</label>
+                        <div class="valid-feedback">
+                          Dankuwel!
+                        </div>
+                        <div class="invalid-feedback">
+                          Gelieve uw achternaam in te geven.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-md-6">
+                      <div class="form-floating mb-6">
+                        <input id="form_email" type="email" name="email" class="form-control"
+                          placeholder="jane.doe@example.com" required>
+                        <label for="form_email">E-mail *</label>
+                        <div class="valid-feedback">
+                          Dankuwel!
+                        </div>
+                        <div class="invalid-feedback">
+                          Gelieve een geldig e-mailadres in te geven.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-md-6">
+                      <div class="form-select-wrapper mb-6">
+                        <select class="form-select" id="form-select" name="subject-select" required>
+                          <option selected disabled value="">Kies een onderwerp</option>
+                          <option value="Question">Vraag</option>
+                          <option value="Pricing">Prijzen</option>
+                          <option value="Other">Andere</option>
+                        </select>
+                        <div class="valid-feedback">
+                          Dankuwel!
+                        </div>
+                        <div class="invalid-feedback">
+                          Gelieve een onderwerp te kiezen.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-12">
+                      <div class="form-floating mb-6">
+                        <textarea id="form_message" name="message" class="form-control" placeholder="Your message"
+                          style="height: 150px" required></textarea>
+                        <label for="form_message">Bericht *</label>
+                        <div class="valid-feedback">
+                          Dankuwel!
+                        </div>
+                        <div class="invalid-feedback">
+                          Gelieve een bericht in te geven.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /column -->
+                    <!-- <div class="col-12">
+                      <div class="form-check mb-6">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                          I agree to <a href="#" class="hover">terms and policy</a>.
+                        </label>
+                        <div class="invalid-feedback">
+                          You must agree before submitting.
+                        </div>
+                      </div>
+                    </div> -->
+                    <!-- /column -->
+                    <div class="col-12">
+                      <input type="submit" class="btn btn-white btn-send" value="Verstuur bericht">
+                    </div>
+                    <!-- /column -->
+                  </div>
+                  <!-- /.row -->
+                </form>
+                <!-- /form -->
+              </div>
+              <!--/column -->
+              <div class="col-lg-4">
+                <div class="d-flex flex-row">
+                  <div>
+                    <div class="icon text-white fs-30 me-5 mt-1"> <i class="si-ecommerce_shop-location"></i> </div>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Adres</h5>
+                    <address>Nieuwstraat 15, <br /> 3990 Peer, <br /> Belgium</address>
+                  </div>
+                </div>
+                <div class="d-flex flex-row">
+                  <div>
+                    <div class="icon text-white fs-30 me-5 mt-1"> <i class="si-phone_drop-call"></i> </div>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Telefoonnr</h5>
+                    <a href="tel:+32473243377">+32 473 24 33 77</a>
+                  </div>
+                </div>
+                <div class="d-flex flex-row">
+                  <div>
+                    <div class="icon text-white fs-30 me-5 mt-1"> <i class="si-mail_send-arrow"></i> </div>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">E-mail</h5>
+                    <p class="mb-0"><a href="mailto:#" class="link-body">daanjansen.fotografie@gmail.com</a></p>
+                  </div>
+                </div>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+            <h2 class="mt-10 mb-8 text-center">Volg ons op Instagram</h2>
+            <div class="grid grid-view position-relative mb-10">
+              <div class="position-absolute mt-3"
+                style="top:50%; left: 50%; z-index:2; transform: translate(-50%,-50%);"><a
+                  href="https://www.instagram.com/jansen_weddingphotography/" class="btn btn-white"><i
+                    class="uil uil-instagram fs-18 me-1"></i> Follow Me</a></div>
+              <div class="row gx-md-6 gy-6 isotope opacity-50">
+                <div class="item col-md-6 col-lg-3">
+                  <figure class="rounded"><img src="@@webRoot/assets/img/portfolio-photos/ine&joris/1.jpg"
+                      srcset="@@webRoot/assets/img/portfolio-photos/ine&joris/1.jpg 2x" alt="" /></figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-lg-3">
+                  <figure class="rounded"><img src="@@webRoot/assets/img/portfolio-photos/ine&joris/5.jpg"
+                      srcset="@@webRoot/assets/img/portfolio-photos/ine&joris/5.jpg 2x" alt="" /></figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-lg-3">
+                  <figure class="rounded"><img src="@@webRoot/assets/img/portfolio-photos/ine&joris/2.jpg"
+                      srcset="@@webRoot/assets/img/portfolio-photos/ine&joris/2.jpg 2x" alt="" /></figure>
+                </div>
+                <!-- /.item -->
+                <div class="item col-md-6 col-lg-3">
+                  <figure class="rounded"><img src="@@webRoot/assets/img/portfolio-photos/ine&joris/3.jpg"
+                      srcset="@@webRoot/assets/img/portfolio-photos/ine&joris/3.jpg 2x" alt="" /></figure>
+                </div>
+                <!-- /.item -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.grid -->
+            @@include('_footer.html')
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!--/.container -->
+    </section>

@@ -1,0 +1,23 @@
+{
+  "title": "Welkom",
+  "nav": {
+    "home": "Home",
+    "about": "Over mij",
+    "portfolio": "Portfolio",
+    "gallery": "Galerij",
+    "services": "Diensten",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Daan Jansen",
+    "cta": "Bekijk Mijn Werk"
+  },
+  "contact": {
+    "email": "daanjansen.fotografie@gmail.com",
+    "phone": "+32 473 24 33 77"
+  },
+  "social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram"
+  }
+}
