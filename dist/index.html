@@ -7,12 +7,11 @@
   <meta name="description" content="A gorgeous looking onepage site template suitable for photographers, visual artists, digital studios, freelancers that would like to showcase their portfolio beautifully.">
   <meta name="keywords" content="bootstrap 5, one page, responsive, photography, minimal, modern, gulp, sass">
   <meta name="author" content="elemis">
-  <title>Locus - Photography One Page Bootstrap 5 Template</title>
-  <link rel="shortcut icon" href="./assets/img/favicon.png">
+  <title>Daan Jansen Photograpy</title>
+  <link rel="shortcut icon" href="./assets/img/logo-djf/favicon/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/css/plugins.css">
   <link rel="stylesheet" href="./assets/css/style-light.css">
   <link rel="stylesheet" href="./assets/css/colors/blue.css">
-  <script src="src/assets/js/vendor/i18n.js"></script>
 </head>
 
 <body class="onepage" data-bs-spy="scroll" data-bs-target=".navbar-collapse .navbar-nav">
@@ -35,22 +34,22 @@
             <div class="offcanvas-body d-flex flex-column h-100">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link scroll active" href="#home">Home</a>
+                  <a class="nav-link scroll active" href="#home" data-i18n="home"></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link scroll" href="#about">About</a>
+                  <a class="nav-link scroll" href="#about" data-i18n="about"></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link scroll" href="#portfolio">Portfolio</a>
+                  <a class="nav-link scroll" href="#portfolio" data-i18n="portfolio"></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link scroll" href="#gallery">Gallery</a>
+                  <a class="nav-link scroll" href="#gallery" data-i18n="gallery"></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link scroll" href="#services">Services</a>
+                  <a class="nav-link scroll" href="#services" data-i18n="services"></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link scroll" href="#contact">Contact</a>
+                  <a class="nav-link scroll" href="#contact" data-i18n="contact"></a>
                 </li>
                 <!-- <li class="nav-item dropdown"><a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown">Features</a>
               <ul class="dropdown-menu">
@@ -103,17 +102,17 @@
               </li>
               <li class="nav-item dropdown ms-2">
                 <a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="./assets/img/translation-flags/belgium.png" alt="Nederlands" width="32" height="32" title="Language" />
+                  <img src="/assets/img/translation-flags/belgium.png" alt="Nederlands" width="32" height="32" title="Language" />
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end p-1" style="min-width: auto;">
                   <li>
-                    <a class="ddropdown-item p-1 d-flex justify-content-center" href="#" data-lang="en">
-                      <img src="./assets/img/translation-flags/english.png" alt="English" width="32" height="32" title="English" />
+                    <a class="dropdown-item p-1 d-flex justify-content-center" href="#" data-lang="en">
+                      <img src="/assets/img/translation-flags/english.png" alt="English" width="32" height="32" title="English" />
                     </a>
                   </li>
                   <li>
                     <a class="dropdown-item p-1 d-flex justify-content-center" href="#" data-lang="nl">
-                      <img src="./assets/img/translation-flags/belgium.png" alt="Nederlands" width="32" height="32" title="Nederlands" />
+                      <img src="/assets/img/translation-flags/belgium.png" alt="Nederlands" width="32" height="32" title="Nederlands" />
                     </a>
                   </li>
                 </ul>
@@ -134,7 +133,7 @@
       <div class="container vh-100 d-flex flex-column align-items-center justify-content-center" data-cues="zoomIn" data-group="hero">
         <h2 class="fs-16 ls-lg text-uppercase mb-5 text-white" data-i18n="title"></h2>
         <h1 class="display-1 mb-8 text-white">Daan Jansen</h1>
-        <span><a href="#portfolio" class="btn btn-lg btn-white scroll">View My Work</a></span>
+        <span><a href="#portfolio" class="btn btn-lg btn-white scroll" data-i18n="viewWork"></a></span>
       </div>
     </section>
     <section id="about">
@@ -147,18 +146,19 @@
               </div>
               <!-- /column -->
               <div class="col-lg-7">
-                <h2 class="mb-3">Life is an adventure. Capture every minute.</h2>
-                <p class="lead mb-7">Er schuilt iets magisch in een bruiloft. De emoties, het gelach, de gelukkige tranen en al die unieke momenten maken elke viering bijzonder. Het vastleggen van die pure, oprechte gevoelens is precies waarom ik doe wat ik doe. Beelden creëren die de vreugde terugbrengen en je telkens opnieuw laten wegdromen naar jullie dag, dat is mijn passie. </p>
+                <h2 class="mb-3" data-i18n="aboutTitle"></h2>
+                <p class="lead mb-7" data-i18n="aboutText"></p>
                 <div class="row">
                   <div class="col-lg-6">
-                    <h3 class="h4 mb-3">Een beetje over mij</h3>
-                    <p>
-                      <span class="dropcap">I</span> ’m Daan — a wedding photographer based in Belgium with a passion for capturing real emotions and unforgettable moments. I may be new to wedding photography, but I’ve quickly fallen in love with the energy, joy, and emotion that fill every wedding day. For me, photography is all about people — the laughter, the happy tears, the quiet looks that say everything. I don’t believe in stiff poses or forced smiles; I want my couples to feel relaxed, have fun, and just be themselves while I document it all. While Belgium is home, I’m excited to bring my camera (and curiosity) across Europe, telling love stories wherever they happen. Every wedding is unique, and I can’t wait to capture yours — with honesty, warmth, and a little bit of adventure.
-                    </p>
+                    <h3 class="h4 mb-3" data-i18n="aboutSubTitle"></h3>
+                    <div>
+                      <span class="dropcap">I</span>
+                      <p data-i18n="aboutSubText"></p>
+                    </div>
                   </div>
                   <!-- /column -->
                   <div class="col-lg-6">
-                    <h3 class="h4 mb-3">Mijn materialen</h3>
+                    <h3 class="h4 mb-3" data-i18n="aboutMaterialsTitle"></h3>
                     <ul class="unordered-list bullet-primary">
                       <li>Canon Eos 5D Mark IV 24-105mm</li>
                       <li>DJI mini4 pro drone</li>
@@ -189,8 +189,9 @@
           <div class="card-body">
             <div class="row">
               <div class="col-xl-7 mx-auto">
-                <h2 class="mb-3 text-center">Mijn portfolio</h2>
-                <p class="lead mb-10 text-center px-xxl-12">De mooiste momenten in ons leven verdienen de mooiste foto's </p>
+                <h2 class="mb-3 text-center" data-i18n="portfolioTitle"></h2>
+                <p class="lead mb-10 text-center px-xxl-12" data-i18n="portfolioIntro">
+                </p>
               </div>
               <!-- /column -->
             </div>
@@ -198,11 +199,11 @@
             <div class="grid grid-view">
               <div class="isotope-filter filter mb-8 text-center">
                 <ul>
-                  <li><a class="filter-item active" data-filter="*">Alles</a></li>
-                  <li><a class="filter-item" data-filter=".shoots">Shoots</a></li>
-                  <li><a class="filter-item" data-filter=".ceremony">Ceremonie</a></li>
-                  <li><a class="filter-item" data-filter=".party">Avondfeest</a></li>
-                  <li><a class="filter-item" data-filter=".other">Andere avonturen</a></li>
+                  <li><a class="filter-item active" data-filter="*" data-i18n="all"></a></li>
+                  <li><a class="filter-item" data-filter=".shoots" data-i18n="shoots"></a></li>
+                  <li><a class="filter-item" data-filter=".ceremony" data-i18n="ceremony"></a></li>
+                  <li><a class="filter-item" data-filter=".party" data-i18n="party"></a></li>
+                  <li><a class="filter-item" data-filter=".other" data-i18n="otherAdventures"></a></li>
                 </ul>
               </div>
               <div class="row gx-md-6 gy-6 isotope">
@@ -301,14 +302,14 @@
       </div>
     </section>
     <!-- TODO: block voor content creation -->
-    <!-- TODO: block voor content creation -->
   </div>
   <section id="gallery">
     <div class="container pt-7 pb-15">
       <div class="card">
         <div class="card-body">
-          <h2 class="mb-3 text-center">Galerij</h2>
-          <p class="lead mb-10 text-center px-xl-12">Enkele van de mooiste bruiloften waar wij deel van mochten zijn. </p>
+          <h2 class="mb-3 text-center" data-i18n="galery"></h2>
+          <p class="lead mb-10 text-center px-xl-12" data-i18n="galeryIntro">
+          </p>
           <div class="grid grid-view">
             <div class="row gx-md-6 gy-6 isotope">
               <div class="item col-md-6 col-xl-4">
@@ -317,7 +318,7 @@
                     <img src="./assets/img/portfolio-photos/ine&joris/5.jpg" srcset="./assets/img/portfolio-photos/ine&joris/5.jpg 2x" alt="" />
                   </a>
                   <figcaption>
-                    <h4 class="from-top h6 mb-0">Ine en Joris</h4>
+                    <h4 class="from-top h6 mb-0">Ine & Joris</h4>
                   </figcaption>
                 </figure>
                 <ul class="d-none">
@@ -329,95 +330,30 @@
                 </ul>
               </div>
               <!-- /.item -->
-              <div class="item col-md-6 col-xl-4">
-                <figure class="overlay rounded">
-                  <a href="./assets/img/photos/au1.jpg" data-glightbox="title: Australia" data-gallery="g-australia">
-                    <img src="./assets/img/photos/au-th.jpg" srcset="./assets/img/photos/au-th@2x.jpg 2x" alt="" />
-                  </a>
-                  <figcaption>
-                    <h4 class="from-top h6 mb-0">Australia</h4>
-                  </figcaption>
-                </figure>
-                <ul class="d-none">
-                  <li><a href="./assets/img/photos/au2.jpg" data-glightbox="title: Australia" data-gallery="g-australia"></a></li>
-                  <li><a href="./assets/img/photos/au3.jpg" data-glightbox="title: Australia" data-gallery="g-australia"></a></li>
-                  <li><a href="./assets/img/photos/au4.jpg" data-glightbox="title: Australia" data-gallery="g-australia"></a></li>
-                  <li><a href="./assets/img/photos/au5.jpg" data-glightbox="title: Australia" data-gallery="g-australia"></a></li>
-                  <li><a href="./assets/img/photos/au6.jpg" data-glightbox="title: Australia" data-gallery="g-australia"></a></li>
-                </ul>
-              </div>
-              <!-- /.item -->
-              <div class="item col-md-6 col-xl-4">
-                <figure class="overlay rounded">
-                  <a href="./assets/img/photos/eg1.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt">
-                    <img src="./assets/img/photos/eg-th.jpg" srcset="./assets/img/photos/eg-th@2x.jpg 2x" alt="" />
-                  </a>
-                  <figcaption>
-                    <h4 class="from-top h6 mb-0">Egypt</h4>
-                  </figcaption>
-                </figure>
-                <ul class="d-none">
-                  <li><a href="./assets/img/photos/eg2.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt"></a></li>
-                  <li><a href="./assets/img/photos/eg3.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt"></a></li>
-                  <li><a href="./assets/img/photos/eg4.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt"></a></li>
-                  <li><a href="./assets/img/photos/eg5.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt"></a></li>
-                  <li><a href="./assets/img/photos/eg6.jpg" data-glightbox="title: Egypt" data-gallery="g-egypt"></a></li>
-                </ul>
-              </div>
-              <!-- /.item -->
-              <div class="item col-md-6 col-xl-4">
-                <figure class="overlay rounded">
-                  <a href="./assets/img/photos/sc1.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia">
-                    <img src="./assets/img/photos/sc-th.jpg" srcset="./assets/img/photos/sc-th@2x.jpg 2x" alt="" />
-                  </a>
-                  <figcaption>
-                    <h4 class="from-top h6 mb-0">Scandinavia</h4>
-                  </figcaption>
-                </figure>
-                <ul class="d-none">
-                  <li><a href="./assets/img/photos/sc2.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia"></a></li>
-                  <li><a href="./assets/img/photos/sc3.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia"></a></li>
-                  <li><a href="./assets/img/photos/sc4.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia"></a></li>
-                  <li><a href="./assets/img/photos/sc5.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia"></a></li>
-                  <li><a href="./assets/img/photos/sc6.jpg" data-glightbox="title: Scandinavia" data-gallery="g-scandinavia"></a></li>
-                </ul>
-              </div>
-              <!-- /.item -->
-              <div class="item col-md-6 col-xl-4">
-                <figure class="overlay rounded">
-                  <a href="./assets/img/photos/aa1.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia">
-                    <img src="./assets/img/photos/aa-th.jpg" srcset="./assets/img/photos/aa-th@2x.jpg 2x" alt="" />
-                  </a>
-                  <figcaption>
-                    <h4 class="from-top h6 mb-0">Anatolia</h4>
-                  </figcaption>
-                </figure>
-                <ul class="d-none">
-                  <li><a href="./assets/img/photos/aa2.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia"></a></li>
-                  <li><a href="./assets/img/photos/aa3.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia"></a></li>
-                  <li><a href="./assets/img/photos/aa4.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia"></a></li>
-                  <li><a href="./assets/img/photos/aa5.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia"></a></li>
-                  <li><a href="./assets/img/photos/aa6.jpg" data-glightbox="title: Anatolia" data-gallery="g-anatolia"></a></li>
-                </ul>
-              </div>
-              <!-- /.item -->
-              <div class="item col-md-6 col-xl-4">
-                <figure class="overlay rounded">
-                  <a href="./assets/img/photos/br1.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil">
-                    <img src="./assets/img/photos/br-th.jpg" srcset="./assets/img/photos/br-th@2x.jpg 2x" alt="" />
-                  </a>
-                  <figcaption>
-                    <h4 class="from-top h6 mb-0">Brazil</h4>
-                  </figcaption>
-                </figure>
-                <ul class="d-none">
-                  <li><a href="./assets/img/photos/br2.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil"></a></li>
-                  <li><a href="./assets/img/photos/br3.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil"></a></li>
-                  <li><a href="./assets/img/photos/br4.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil"></a></li>
-                  <li><a href="./assets/img/photos/br5.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil"></a></li>
-                  <li><a href="./assets/img/photos/br6.jpg" data-glightbox="title: Brazil" data-gallery="g-brazil"></a></li>
-                </ul>
-              </div>
+              <!-- <div class="item col-md-6 col-xl-4">
+                  <figure class="overlay rounded">
+                    <a href="./assets/img/photos/au1.jpg" data-glightbox="title: Australia"
+                      data-gallery="g-australia">
+                      <img src="./assets/img/photos/au-th.jpg"
+                        srcset="./assets/img/photos/au-th@2x.jpg 2x" alt="" />
+                    </a>
+                    <figcaption>
+                      <h4 class="from-top h6 mb-0">Australia</h4>
+                    </figcaption>
+                  </figure>
+                  <ul class="d-none">
+                    <li><a href="./assets/img/photos/au2.jpg" data-glightbox="title: Australia"
+                        data-gallery="g-australia"></a></li>
+                    <li><a href="./assets/img/photos/au3.jpg" data-glightbox="title: Australia"
+                        data-gallery="g-australia"></a></li>
+                    <li><a href="./assets/img/photos/au4.jpg" data-glightbox="title: Australia"
+                        data-gallery="g-australia"></a></li>
+                    <li><a href="./assets/img/photos/au5.jpg" data-glightbox="title: Australia"
+                        data-gallery="g-australia"></a></li>
+                    <li><a href="./assets/img/photos/au6.jpg" data-glightbox="title: Australia"
+                        data-gallery="g-australia"></a></li>
+                  </ul>
+                </div> -->
               <!-- /.item -->
             </div>
             <!-- /.row -->
@@ -429,13 +365,111 @@
       <!--/.card -->
     </div>
   </section>
+  <section id="services">
+    <div class="container pt-7 pb-15">
+      <div class="card">
+        <div class="card-body">
+          <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+            <div class="col-lg-6 position-relative order-lg-2">
+              <div class="overlap-grid overlap-grid-2">
+                <div class="item">
+                  <figure class="rounded shadow"><img src="./assets/img/photos/s1.jpg" srcset="./assets/img/photos/s1@2x.jpg 2x" alt=""></figure>
+                </div>
+                <div class="item">
+                  <figure class="rounded shadow"><img src="./assets/img/photos/s2.jpg" srcset="./assets/img/photos/s2@2x.jpg 2x" alt=""></figure>
+                </div>
+              </div>
+            </div>
+            <!--/column -->
+            <div class="col-lg-6">
+              <h2 class="mb-3" data-i18n="services"></h2>
+              <p class="lead mb-7" data-i18n="servicesIntro"></p>
+              <div class="d-flex flex-row mb-5">
+                <div>
+                  <div class="icon fs-44 text-white mt-1 me-5"><i class="si-photo_camera"></i></div>
+                </div>
+                <div>
+                  <h3 class="h4 mb-1" data-i18n="photography"></h3>
+                  <p class="mb-0" data-i18n="fotographyExplanation"></p>
+                  <!--TODO: info aanvullen-->
+                </div>
+              </div>
+              <div class="d-flex flex-row mb-5">
+                <div>
+                  <div class="icon fs-44 text-white mt-1 me-5"><i class="si-photo_camera"></i></div>
+                </div>
+                <div>
+                  <h3 class="h4 mb-1" data-i18n="dronePhotography"></h3>
+                  <p class="mb-0" data-i18n="droneExplanation"></p>
+                </div>
+              </div>
+              <div class="d-flex flex-row mb-5">
+                <div>
+                  <div class="icon fs-44 text-white mt-1 me-5"><i class="si-photo_camera"></i></div>
+                </div>
+                <div>
+                  <h3 class="h4 mb-1" data-i18n="contentCreation"></h3>
+                  <p class="mb-0" data-i18n="contentCreationExplanation"></p>
+                </div>
+              </div>
+              <div class="d-flex flex-row mb-5">
+                <div>
+                  <div class="icon fs-44 text-white mt-1 me-5"><i class="si-photo_magic-tools"></i></div>
+                </div>
+                <div>
+                  <h3 class="h4 mb-1" data-i18n="retouch"></h3>
+                  <p class="mb-0" data-i18n="retouchExplanation"></p>
+                </div>
+              </div>
+            </div>
+            <!--/column -->
+          </div>
+          <!--/.row -->
+          <div class="row mt-6">
+            <div class="col-lg-4 col-md-6 mb-4 text-center">
+              <figure class="overlay rounded shadow">
+                <a href="./assets/img/pricing/classic.jpg" data-glightbox="title: Classic Pakket; description: €950" data-gallery="g-pricing">
+                  <img src="./assets/img/pricing/classic.jpg" alt="Classic" class="img-fluid rounded mb-3">
+                </a>
+                <figcaption><i class="si-photo_aperture"></i></figcaption>
+              </figure>
+              <h5 class="mb-1">Classic</h5>
+              <p class="text-muted">€950</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 text-center">
+              <figure class="overlay rounded shadow">
+                <a href="./assets/img/pricing/medium.jpg" data-glightbox="title: Medium Pakket; description: €1500" data-gallery="g-pricing">
+                  <img src="./assets/img/pricing/medium.jpg" alt="Medium" class="img-fluid rounded mb-3">
+                </a>
+                <figcaption><i class="si-photo_aperture"></i></figcaption>
+              </figure>
+              <h5 class="mb-1">Medium</h5>
+              <p class="text-muted">€1500</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 text-center">
+              <figure class="overlay rounded shadow">
+                <a href="./assets/img/pricing/premium.jpg" data-glightbox="title: Premium Pakket; description: €1800" data-gallery="g-pricing">
+                  <img src="./assets/img/pricing/premium.jpg" alt="Premium" class="img-fluid rounded mb-3">
+                </a>
+                <figcaption><i class="si-photo_aperture"></i></figcaption>
+              </figure>
+              <h5 class="mb-1">Premium</h5>
+              <p class="text-muted">€1800</p>
+            </div>
+          </div>
+        </div>
+        <!--/.card-body -->
+      </div>
+      <!--/.card -->
+    </div>
+  </section>
   <!-- TODO: prijslijsten voor content creation-->
   <section id="contact">
     <div class="container pt-7 pb-15">
       <div class="card">
         <div class="card-body">
-          <h2 class="mb-3">Contact</h2>
-          <p class="lead mb-10">Heb je vragen? Aarzel niet om ons te contacteren.</p>
+          <h2 class="mb-3" data-i18n="contact"></h2>
+          <p class="lead mb-10" data-i18n="contactIntro"></p>
           <div class="row gy-10 gx-lg-8 gx-xl-12">
             <div class="col-lg-8">
               <form class="contact-form needs-validation" method="post" action="./assets/php/contact.php" novalidate>
@@ -444,66 +478,62 @@
                   <div class="col-md-6">
                     <div class="form-floating mb-6">
                       <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
-                      <label for="form_name">Voornaam *</label>
-                      <div class="valid-feedback"> Dankuwel! </div>
-                      <div class="invalid-feedback"> Gelieve uw voornaam in te geven. </div>
+                      <label for="form_name" data-i18n="firstname"></label>
+                      <div class="valid-feedback" data-i18n="feedback"></div>
+                      <div class="invalid-feedback" data-i18n="invalidFeedbackFirstname"></div>
                     </div>
                   </div>
                   <!-- /column -->
                   <div class="col-md-6">
                     <div class="form-floating mb-6">
                       <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe" required>
-                      <label for="form_lastname">Achternaam *</label>
-                      <div class="valid-feedback"> Dankuwel! </div>
-                      <div class="invalid-feedback"> Gelieve uw achternaam in te geven. </div>
+                      <label for="form_lastname" data-i18n="lastname"></label>
+                      <div class="valid-feedback" data-i18n="feedback"></div>
+                      <div class="invalid-feedback" data-i18n="invalidFeedbackLastname"></div>
                     </div>
                   </div>
                   <!-- /column -->
                   <div class="col-md-6">
                     <div class="form-floating mb-6">
                       <input id="form_email" type="email" name="email" class="form-control" placeholder="jane.doe@example.com" required>
-                      <label for="form_email">E-mail *</label>
-                      <div class="valid-feedback"> Dankuwel! </div>
-                      <div class="invalid-feedback"> Gelieve een geldig e-mailadres in te geven. </div>
+                      <label for="form_email" data-i18n="email"></label>
+                      <div class="valid-feedback" data-i18n="feedback"></div>
+                      <div class="invalid-feedback" data-i18n="invalidFeedbackEmail"></div>
                     </div>
                   </div>
                   <!-- /column -->
                   <div class="col-md-6">
                     <div class="form-select-wrapper mb-6">
                       <select class="form-select" id="form-select" name="subject-select" required>
-                        <option selected disabled value="">Kies een onderwerp</option>
-                        <option value="Question">Vraag</option>
-                        <option value="Pricing">Prijzen</option>
-                        <option value="Other">Andere</option>
+                        <option selected disabled value="" data-i18n="subject"></option>
+                        <option value="Question" data-i18n="question"></option>
+                        <option value="Pricing" data-i18n="prices"></option>
+                        <option value="Other" data-i18n="other"></option>
                       </select>
-                      <div class="valid-feedback"> Dankuwel! </div>
-                      <div class="invalid-feedback"> Gelieve een onderwerp te kiezen. </div>
+                      <div class="valid-feedback" data-i18n="feedback"></div>
+                      <div class="invalid-feedback" data-i18n="invalidFeedbackSubject"></div>
                     </div>
                   </div>
                   <!-- /column -->
                   <div class="col-12">
                     <div class="form-floating mb-6">
                       <textarea id="form_message" name="message" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
-                      <label for="form_message">Bericht *</label>
-                      <div class="valid-feedback"> Dankuwel! </div>
-                      <div class="invalid-feedback"> Gelieve een bericht in te geven. </div>
+                      <label for="form_message" data-i18n="message"></label>
+                      <div class="valid-feedback" data-i18n="feedback"></div>
+                      <div class="invalid-feedback" data-i18n="invalidFeedbackMessage"></div>
                     </div>
                   </div>
                   <!-- /column -->
-                  <!-- <div class="col-12">
-                      <div class="form-check mb-6">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
-                          I agree to <a href="#" class="hover">terms and policy</a>.
-                        </label>
-                        <div class="invalid-feedback">
-                          You must agree before submitting.
-                        </div>
-                      </div>
-                    </div> -->
+                  <div class="col-12">
+                    <div class="form-check mb-6">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck" data-i18n="termsAndPolicy"></label>
+                      <div class="invalid-feedback" data-i18n="invalidFeedbackTermsAndPolicy"></div>
+                    </div>
+                  </div>
                   <!-- /column -->
                   <div class="col-12">
-                    <input type="submit" class="btn btn-white btn-send" value="Verstuur bericht">
+                    <input type="submit" class="btn btn-white btn-send" value="Verstuur bericht" data-i18n-attr="value:submitButton">
                   </div>
                   <!-- /column -->
                 </div>
@@ -518,7 +548,7 @@
                   <div class="icon text-white fs-30 me-5 mt-1"> <i class="si-ecommerce_shop-location"></i> </div>
                 </div>
                 <div>
-                  <h5 class="mb-1">Adres</h5>
+                  <h5 class="mb-1" data-i18n="address"></h5>
                   <address>Nieuwstraat 15, <br /> 3990 Peer, <br /> Belgium</address>
                 </div>
               </div>
@@ -527,7 +557,7 @@
                   <div class="icon text-white fs-30 me-5 mt-1"> <i class="si-phone_drop-call"></i> </div>
                 </div>
                 <div>
-                  <h5 class="mb-1">Telefoonnr</h5>
+                  <h5 class="mb-1" data-i18n="telnr"></h5>
                   <a href="tel:+32473243377">+32 473 24 33 77</a>
                 </div>
               </div>
@@ -536,7 +566,7 @@
                   <div class="icon text-white fs-30 me-5 mt-1"> <i class="si-mail_send-arrow"></i> </div>
                 </div>
                 <div>
-                  <h5 class="mb-1">E-mail</h5>
+                  <h5 class="mb-1" data-i18n="email"></h5>
                   <p class="mb-0"><a href="mailto:#" class="link-body">daanjansen.fotografie@gmail.com</a></p>
                 </div>
               </div>
@@ -544,9 +574,10 @@
             <!--/column -->
           </div>
           <!--/.row -->
-          <h2 class="mt-10 mb-8 text-center">Volg ons op Instagram</h2>
+          <h2 class="mt-10 mb-8 text-center" data-i18n="followInsta"></h2>
           <div class="grid grid-view position-relative mb-10">
-            <div class="position-absolute mt-3" style="top:50%; left: 50%; z-index:2; transform: translate(-50%,-50%);"><a href="https://www.instagram.com/jansen_weddingphotography/" class="btn btn-white"><i class="uil uil-instagram fs-18 me-1"></i> Follow Me</a></div>
+            <div class="position-absolute mt-3" style="top:50%; left: 50%; z-index:2; transform: translate(-50%,-50%);"><a href="https://www.instagram.com/jansen_weddingphotography/" class="btn btn-white">
+                <i class="uil uil-instagram fs-18 me-1"></i> Follow</a></div>
             <div class="row gx-md-6 gy-6 isotope opacity-50">
               <div class="item col-md-6 col-lg-3">
                 <figure class="rounded"><img src="./assets/img/portfolio-photos/ine&joris/1.jpg" srcset="./assets/img/portfolio-photos/ine&joris/1.jpg 2x" alt="" /></figure>
@@ -568,7 +599,7 @@
             <!-- /.row -->
           </div>
           <!-- /.grid -->
-          <p class="mb-0 text-center">© 2023 Locus. All rights reserved.</p>
+          <p class="mb-0 text-center">© 2026 Lotte Jansen. All rights reserved.</p>
         </div>
         <!--/.card-body -->
       </div>
@@ -593,6 +624,7 @@
   <!-- /.content-wrapper -->
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/theme.js"></script>
+  <script src="./assets/js/vendor/i18n.js"></script>
 </body>
 
 </html>

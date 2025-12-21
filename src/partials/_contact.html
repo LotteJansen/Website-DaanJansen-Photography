@@ -2,8 +2,8 @@
       <div class="container pt-7 pb-15">
         <div class="card">
           <div class="card-body">
-            <h2 class="mb-3">Contact</h2>
-            <p class="lead mb-10">Heb je vragen? Aarzel niet om ons te contacteren.</p>
+            <h2 class="mb-3" data-i18n="contact"></h2>
+            <p class="lead mb-10" data-i18n="contactIntro"></p>
             <div class="row gy-10 gx-lg-8 gx-xl-12">
               <div class="col-lg-8">
                 <form class="contact-form needs-validation" method="post" action="@@webRoot/assets/php/contact.php"
@@ -13,27 +13,18 @@
                     <div class="col-md-6">
                       <div class="form-floating mb-6">
                         <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
-                        <label for="form_name">Voornaam *</label>
-                        <div class="valid-feedback">
-                          Dankuwel!
-                        </div>
-                        <div class="invalid-feedback">
-                          Gelieve uw voornaam in te geven.
-                        </div>
+                        <label for="form_name" data-i18n="firstname"></label>
+                        <div class="valid-feedback" data-i18n="feedback"></div>
+                        <div class="invalid-feedback" data-i18n="invalidFeedbackFirstname"></div>
                       </div>
                     </div>
                     <!-- /column -->
                     <div class="col-md-6">
                       <div class="form-floating mb-6">
-                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe"
-                          required>
-                        <label for="form_lastname">Achternaam *</label>
-                        <div class="valid-feedback">
-                          Dankuwel!
-                        </div>
-                        <div class="invalid-feedback">
-                          Gelieve uw achternaam in te geven.
-                        </div>
+                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe" required>
+                        <label for="form_lastname" data-i18n="lastname"></label>
+                        <div class="valid-feedback" data-i18n="feedback"></div>
+                        <div class="invalid-feedback" data-i18n="invalidFeedbackLastname"></div>
                       </div>
                     </div>
                     <!-- /column -->
@@ -41,61 +32,44 @@
                       <div class="form-floating mb-6">
                         <input id="form_email" type="email" name="email" class="form-control"
                           placeholder="jane.doe@example.com" required>
-                        <label for="form_email">E-mail *</label>
-                        <div class="valid-feedback">
-                          Dankuwel!
-                        </div>
-                        <div class="invalid-feedback">
-                          Gelieve een geldig e-mailadres in te geven.
-                        </div>
+                        <label for="form_email" data-i18n="email"></label>
+                        <div class="valid-feedback" data-i18n="feedback"></div>
+                        <div class="invalid-feedback" data-i18n="invalidFeedbackEmail"></div>
                       </div>
                     </div>
                     <!-- /column -->
                     <div class="col-md-6">
                       <div class="form-select-wrapper mb-6">
                         <select class="form-select" id="form-select" name="subject-select" required>
-                          <option selected disabled value="">Kies een onderwerp</option>
-                          <option value="Question">Vraag</option>
-                          <option value="Pricing">Prijzen</option>
-                          <option value="Other">Andere</option>
+                          <option selected disabled value="" data-i18n="subject"></option>
+                          <option value="Question" data-i18n="question"></option>
+                          <option value="Pricing" data-i18n="prices"></option>
+                          <option value="Other" data-i18n="other"></option>
                         </select>
-                        <div class="valid-feedback">
-                          Dankuwel!
-                        </div>
-                        <div class="invalid-feedback">
-                          Gelieve een onderwerp te kiezen.
-                        </div>
+                        <div class="valid-feedback" data-i18n="feedback"></div>
+                        <div class="invalid-feedback" data-i18n="invalidFeedbackSubject"></div>
                       </div>
                     </div>
                     <!-- /column -->
                     <div class="col-12">
                       <div class="form-floating mb-6">
-                        <textarea id="form_message" name="message" class="form-control" placeholder="Your message"
-                          style="height: 150px" required></textarea>
-                        <label for="form_message">Bericht *</label>
-                        <div class="valid-feedback">
-                          Dankuwel!
-                        </div>
-                        <div class="invalid-feedback">
-                          Gelieve een bericht in te geven.
-                        </div>
+                        <textarea id="form_message" name="message" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
+                        <label for="form_message" data-i18n="message"></label>
+                        <div class="valid-feedback" data-i18n="feedback"></div>
+                        <div class="invalid-feedback" data-i18n="invalidFeedbackMessage"></div>
                       </div>
                     </div>
                     <!-- /column -->
-                    <!-- <div class="col-12">
+                    <div class="col-12">
                       <div class="form-check mb-6">
                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
-                          I agree to <a href="#" class="hover">terms and policy</a>.
-                        </label>
-                        <div class="invalid-feedback">
-                          You must agree before submitting.
-                        </div>
+                        <label class="form-check-label" for="invalidCheck" data-i18n="termsAndPolicy"></label>
+                        <div class="invalid-feedback" data-i18n="invalidFeedbackTermsAndPolicy"></div>
                       </div>
-                    </div> -->
+                    </div>
                     <!-- /column -->
                     <div class="col-12">
-                      <input type="submit" class="btn btn-white btn-send" value="Verstuur bericht">
+                      <input type="submit" class="btn btn-white btn-send" value="Verstuur bericht" data-i18n-attr="value:submitButton">
                     </div>
                     <!-- /column -->
                   </div>
@@ -110,7 +84,7 @@
                     <div class="icon text-white fs-30 me-5 mt-1"> <i class="si-ecommerce_shop-location"></i> </div>
                   </div>
                   <div>
-                    <h5 class="mb-1">Adres</h5>
+                    <h5 class="mb-1" data-i18n="address"></h5>
                     <address>Nieuwstraat 15, <br /> 3990 Peer, <br /> Belgium</address>
                   </div>
                 </div>
@@ -119,7 +93,7 @@
                     <div class="icon text-white fs-30 me-5 mt-1"> <i class="si-phone_drop-call"></i> </div>
                   </div>
                   <div>
-                    <h5 class="mb-1">Telefoonnr</h5>
+                    <h5 class="mb-1" data-i18n="telnr"></h5>
                     <a href="tel:+32473243377">+32 473 24 33 77</a>
                   </div>
                 </div>
@@ -128,7 +102,7 @@
                     <div class="icon text-white fs-30 me-5 mt-1"> <i class="si-mail_send-arrow"></i> </div>
                   </div>
                   <div>
-                    <h5 class="mb-1">E-mail</h5>
+                    <h5 class="mb-1" data-i18n="email"></h5>
                     <p class="mb-0"><a href="mailto:#" class="link-body">daanjansen.fotografie@gmail.com</a></p>
                   </div>
                 </div>
@@ -136,12 +110,12 @@
               <!--/column -->
             </div>
             <!--/.row -->
-            <h2 class="mt-10 mb-8 text-center">Volg ons op Instagram</h2>
+            <h2 class="mt-10 mb-8 text-center" data-i18n="followInsta"></h2>
             <div class="grid grid-view position-relative mb-10">
               <div class="position-absolute mt-3"
                 style="top:50%; left: 50%; z-index:2; transform: translate(-50%,-50%);"><a
-                  href="https://www.instagram.com/jansen_weddingphotography/" class="btn btn-white"><i
-                    class="uil uil-instagram fs-18 me-1"></i> Follow Me</a></div>
+                  href="https://www.instagram.com/jansen_weddingphotography/" class="btn btn-white">
+                  <i class="uil uil-instagram fs-18 me-1"></i> Follow</a></div>
               <div class="row gx-md-6 gy-6 isotope opacity-50">
                 <div class="item col-md-6 col-lg-3">
                   <figure class="rounded"><img src="@@webRoot/assets/img/portfolio-photos/ine&joris/1.jpg"
