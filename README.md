@@ -16,3 +16,13 @@ All the information regarding file structure, build tools can be found in the do
 
 ### Support
 If you have any questions that are beyond the scope of the help documentation, feel free to contact us via the contact form on our profile page: https://themeforest.net/user/elemis
+
+
+
+# Lotte
+
+### Pages
+The index page is cut up in different parts, all in the /partials folder. 
+
+### Translations
+The page is translated with i18n to English and Dutch. To add content, you should add it to the files in /lang and add the data-i18n= -marker in the html. The i18n javascript file is under assets/js/vendor.  

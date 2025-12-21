@@ -37,6 +37,8 @@
     "sass": "1.49.0"
   },
   "dependencies": {
-    "autoprefixer": "10.4.5"
+    "autoprefixer": "10.4.5",
+    "i18next": "^25.7.3",
+    "i18next-http-backend": "^3.0.2"
   }
 }

@@ -12,7 +12,8 @@ var path = {
     img: 'dev/assets/img/',
     fonts: 'dev/assets/fonts/',
     media: 'dev/assets/media/',
-    php: 'dev/assets/php/'
+    php: 'dev/assets/php/',
+    lang: 'dev/lang/'
   },
   dist: {
     html: 'dist/',
@@ -24,7 +25,8 @@ var path = {
     img: 'dist/assets/img/',
     fonts: 'dist/assets/fonts/',
     media: 'dist/assets/media/',
-    php: 'dist/assets/php/'
+    php: 'dist/assets/php/',
+    lang: 'dist/lang/'
   },
   src: {
     html: ['src/**/*.html', '!src/partials/**/*.html', '!src/assets/php/**/*.html'],
@@ -40,7 +42,8 @@ var path = {
     img: 'src/assets/img/**/*.*',
     fonts: 'src/assets/fonts/**/*.*',
     media: 'src/assets/media/**/*.*',
-    php: 'src/assets/php/**/*.*'
+    php: 'src/assets/php/**/*.*',
+    lang: 'src/lang/**/*.json',
   },
   watch: {
     html: ['src/**/*.html', '!src/assets/php/**/*.html'],
@@ -55,7 +58,8 @@ var path = {
     fonts: 'src/assets/fonts/**/*.*',
     media: 'src/assets/media/**/*.*',
     php: 'src/assets/php/',
-    user: 'src/assets/scss/_user-variables.scss'
+    user: 'src/assets/scss/_user-variables.scss',
+    lang: 'src/lang/**/*.json'
   },
   clean: {
     dev: 'dev/*',
@@ -392,6 +396,21 @@ gulp.task('image:dist', function () {
     .on('end', () => { reload(); });
 });
 
+// Move language files (i18n)
+gulp.task('lang:dev', function () {
+  return gulp.src(path.src.lang)
+    .pipe(newer(path.dev.lang))
+    .pipe(gulp.dest(path.dev.lang));
+});
+
+gulp.task('lang:dist', function () {
+  return gulp.src(path.src.lang)
+    .pipe(newer(path.dist.lang))
+    .pipe(gulp.dest(path.dist.lang))
+    .on('end', () => { reload(); });
+});
+
+
 // Remove catalog dev
 gulp.task('clean:dev', function () {
   return del(path.clean.dev);
@@ -420,7 +439,8 @@ gulp.task('build:dev',
       'fonts:dev',
       'media:dev',
       'php:dev',
-      'image:dev'
+      'image:dev',
+      'lang:dev'
       )
     )
 );
@@ -440,7 +460,8 @@ gulp.task('build:dist',
       'fonts:dist',
       'media:dist',
       'php:dist',
-      'image:dist'
+      'image:dist', 
+      'lang:dist'
       )
     )
 );
@@ -460,6 +481,7 @@ gulp.task('watch', function () {
     gulp.watch(path.watch.media, gulp.series('media:dist'));
     gulp.watch(path.watch.php, gulp.series('php:dist'));
     gulp.watch(path.watch.user, gulp.series('colorcss:dist'));
+    gulp.watch(path.watch.lang, gulp.series('lang:dist'));
 });
 
 // Serve
@@ -482,3 +504,5 @@ gulp.task('default', gulp.series(
     'build:dist',
     gulp.parallel('webserver','watch')
 ));
+
+
