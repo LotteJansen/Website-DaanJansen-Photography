@@ -25,4 +25,8 @@ If you have any questions that are beyond the scope of the help documentation, f
 The index page is cut up in different parts, all in the /partials folder. 
 
 ### Translations
-The page is translated with i18n to English and Dutch. To add content, you should add it to the files in /lang and add the data-i18n= -marker in the html. The i18n javascript file is under assets/js/vendor.  
+The page is translated with i18n to English and Dutch. To add content, you should add it to the files in /lang and add the data-i18n= -marker in the html. The i18n javascript file is under assets/js/vendor. 
+
+### Recaptcha
+Google recaptcha is used for emailing
+Please test the mailing when going live

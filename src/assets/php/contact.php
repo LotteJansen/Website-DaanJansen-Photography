@@ -12,14 +12,18 @@ require 'PHPMailer/src/SMTP.php';
 *  CONFIGURATION
 */
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    exit('Direct access not allowed');
+}
+
 // Recipients
-$fromEmail = 'from@example.com'; // Email address that will be in the from field of the message.
-$fromName = 'From Name'; // Name that will be in the from field of the message.
+$fromEmail = 'daanjansen.fotografie@gmail.com'; // Email address that will be in the from field of the message.
+$fromName = 'From website form'; // Name that will be in the from field of the message.
 $sendToEmail = 'daanjansen.fotografie@gmail.com'; // Email address that will receive the message with the output of the form
 $sendToName = 'Daan'; // Name that will receive the message with the output of the form
 
 // Subject
-$subject = 'Message from Sandbox contact form';
+$subject = 'Message from contact form';
 
 // Fields - Value of attribute name => Text to appear in the email
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message', 'subject-select' => 'Subject');
@@ -29,17 +33,21 @@ $okMessage = 'We have received your inquiry. Stay tuned, we’ll get back to you
 $errorMessage = 'There was an error while submitting the form. Please try again later';
 
 // SMTP settings
-$smtpUse = false; // Set to true to enable SMTP authentication
-$smtpHost = ''; // Enter SMTP host ie. smtp.gmail.com
-$smtpUsername = ''; // SMTP username ie. gmail address
-$smtpPassword = ''; // SMTP password ie gmail password
-$smtpSecure = 'tls'; // Enable TLS or SSL encryption
+$config = require __DIR__ . '/../../../config/mail_config.php';
+
+$smtpUse = true; // Set to true to enable SMTP authentication
+$smtpHost = $config['smtpHost'];
+$smtpUsername = $config['smtpUsername'];
+$smtpPassword = $config['smtpPassword'];
+$smtpPort = $config['smtpPort'];
+$smtpSecure = $config['smtpSecure'];
 $smtpAutoTLS = false; // Enable Auto TLS
-$smtpPort = 587; // TCP port to connect to
+
 
 // reCAPTCHA settings
-$recaptchaUse = false; // Set to true to enable reCAPTHCA
-$recaptchaSecret = 'YOUR_SECRET_KEY'; // enter your secret key from https://www.google.com/recaptcha/admin
+$recaptchaUse = true; // Set to true to enable reCAPTHCA
+$recaptchaSecret = $config['recaptchaSecret'];
+
 
 /*
 *  LET'S DO THE SENDING
@@ -61,8 +69,12 @@ try {
       throw new \Exception('ReCaptcha was not validated.');
     }
   }
-  $emailTextHtml = "";
-  $from = "";
+  $safeValue = htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');
+  $emailTextHtml .= "<tr><th><b>{$fields[$key]}</b></th><td>{$safeValue}</td></tr>";
+  $from = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+  if (!$from) {
+    throw new Exception('Invalid email address.');
+  }
   $emailTextHtml .= "<table>";
   foreach ($_POST as $key => $value) {
     // If the field exists in the $fields array, include it in the email
@@ -90,7 +102,7 @@ try {
     $mail->Debugoutput = function ($str, $level) use (&$mailerErrors) {
       $mailerErrors[] = [ 'str' => $str, 'level' => $level ];
     };
-    $mail->SMTPDebug = 3;
+    $mail->SMTPDebug = 0;
     $mail->SMTPAuth = true;
     $mail->SMTPSecure = $smtpSecure;
     $mail->SMTPAutoTLS = $smtpAutoTLS;
