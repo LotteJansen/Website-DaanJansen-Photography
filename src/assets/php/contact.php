@@ -17,9 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Recipients
-$fromEmail = 'daanjansen.fotografie@gmail.com'; // Email address that will be in the from field of the message.
-$fromName = 'From website form'; // Name that will be in the from field of the message.
-$sendToEmail = 'daanjansen.fotografie@gmail.com'; // Email address that will receive the message with the output of the form
+$fromEmail = 'info@daanjansenfotografie.be'; // Email address that will be in the from field of the message.
+$fromName = 'Website contact'; // Name that will be in the from field of the message.
+$sendToEmail = 'info@daanjansenfotografie.be'; // Email address that will receive the message with the output of the form
 $sendToName = 'Daan'; // Name that will receive the message with the output of the form
 
 // Subject
@@ -29,11 +29,11 @@ $subject = 'Message from contact form';
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message', 'subject-select' => 'Subject');
 
 // Success and error alerts
-$okMessage = 'We have received your inquiry. Stay tuned, we’ll get back to you very soon.';
-$errorMessage = 'There was an error while submitting the form. Please try again later';
+$okMessage = 'We hebben jouw bericht ontvangen en zullen zo snel mogelijk contact opnemen.';
+$errorMessage = 'Er ging iets mis met het verzenden van dit bericht. Gelieve ons rechtstreeks te contacteren via jansendaan.fotografie@gmail.com of +32 473 24 33 77';
 
 // SMTP settings
-$config = require __DIR__ . '/../../../config/mail_config.php';
+$config = require __DIR__ . '/mail_config.php';
 
 $smtpUse = true; // Set to true to enable SMTP authentication
 $smtpHost = $config['smtpHost'];
@@ -41,7 +41,7 @@ $smtpUsername = $config['smtpUsername'];
 $smtpPassword = $config['smtpPassword'];
 $smtpPort = $config['smtpPort'];
 $smtpSecure = $config['smtpSecure'];
-$smtpAutoTLS = false; // Enable Auto TLS
+$smtpAutoTLS = true; // Enable Auto TLS
 
 
 // reCAPTCHA settings
@@ -69,19 +69,20 @@ try {
       throw new \Exception('ReCaptcha was not validated.');
     }
   }
-  $safeValue = htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');
-  $emailTextHtml .= "<tr><th><b>{$fields[$key]}</b></th><td>{$safeValue}</td></tr>";
+  // $safeValue = htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');
+  // $emailTextHtml .= "<tr><th><b>{$fields[$key]}</b></th><td>{$safeValue}</td></tr>";
   $from = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
   if (!$from) {
     throw new Exception('Invalid email address.');
   }
+  $emailTextHtml = '';
   $emailTextHtml .= "<table>";
   foreach ($_POST as $key => $value) {
-    // If the field exists in the $fields array, include it in the email
-    if (isset($fields[$key])) {
-      $emailTextHtml .= "<tr><th><b>$fields[$key]</b></th><td>$value</td></tr>";
-    }
+  if (isset($fields[$key])) {
+    $safeValue = htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');
+    $emailTextHtml .= "<tr><th><b>{$fields[$key]}</b></th><td>{$safeValue}</td></tr>";
   }
+}
   $emailTextHtml .= "</table>";
   $mail = new PHPMailer;
   $mail->setFrom($fromEmail, $fromName);

@@ -56,5 +56,7 @@
   "submitButton": "Submit",
   "address": "Address",
   "telnr": "Telephone number",
-  "followInsta": "Follow me on Instagram"
+  "followInsta": "Follow me on Instagram",
+  "contactSuccess": "We have received your message and we will contact you as soon as possible",
+  "contactError": "Something went wrong sending this email. Please try to contact us directly using jansendaan.fotografie@gmail.com or +32 473 24 33 77"
 }

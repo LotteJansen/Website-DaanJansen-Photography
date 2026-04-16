@@ -47,7 +47,7 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 //----------------------------------------------------------//
 //	COLOR SYSTEM
 //----------------------------------------------------------//
-$primary: $green !default;
+$primary: $blue !default;
 $colors: (
   "green": $green,
   "blue": $blue,
@@ -60,7 +60,7 @@ $colors: (
   "primary": $primary,
 ) !default;
 $secondary: $gray-500 !default;
-$success: $green !default;
+$success: $blue !default;
 $info: $blue !default;
 $warning: $yellow !default;
 $danger: $red !default;
@@ -186,8 +186,8 @@ $brand-colors: ("dropbox": $dropbox,
 //----------------------------------------------------------//
 //	BODY
 //----------------------------------------------------------//
-$body-bg:                   $bg !default;
-$body-color:                $gray-400 !default;
+$body-bg:                   #ffff !default; //$bg !default;
+$body-color:                #ffff !default; //$gray-400 !default;
 //----------------------------------------------------------//
 //	LINKS
 //----------------------------------------------------------//
