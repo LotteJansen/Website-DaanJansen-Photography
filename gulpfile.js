@@ -365,33 +365,45 @@ gulp.task('php:dist', function () {
 });
 
 // Image processing
+// gulp.task('image:dev', function () {
+//   return gulp.src(path.src.img)
+//     .pipe(newer(path.dev.img))
+//     .pipe(cache(imagemin([
+//       imagemin.gifsicle({ interlaced: true }),
+//       jpegrecompress({
+//         progressive: true,
+//         max: 90,
+//         min: 80
+//       }),
+//       // pngquant(),
+//       imagemin.svgo({ plugins: [{ removeViewBox: false }] })])))
+//     .pipe(gulp.dest(path.dev.img));
+// });
 gulp.task('image:dev', function () {
   return gulp.src(path.src.img)
     .pipe(newer(path.dev.img))
-    .pipe(cache(imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      jpegrecompress({
-        progressive: true,
-        max: 90,
-        min: 80
-      }),
-      pngquant(),
-      imagemin.svgo({ plugins: [{ removeViewBox: false }] })])))
     .pipe(gulp.dest(path.dev.img));
 });
+
+// gulp.task('image:dist', function () {
+//   return gulp.src(path.src.img)
+//     .pipe(newer(path.dist.img))
+//     .pipe(cache(imagemin([
+//       imagemin.gifsicle({ interlaced: true }),
+//       jpegrecompress({
+//         progressive: true,
+//         max: 90,
+//         min: 80
+//       }),
+//       // pngquant(),
+//       imagemin.svgo({ plugins: [{ removeViewBox: false }] })
+//         ])))
+//     .pipe(gulp.dest(path.dist.img))
+//     .on('end', () => { reload(); });
+// });
 gulp.task('image:dist', function () {
   return gulp.src(path.src.img)
     .pipe(newer(path.dist.img))
-    .pipe(cache(imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      jpegrecompress({
-        progressive: true,
-        max: 90,
-        min: 80
-      }),
-      pngquant(),
-      imagemin.svgo({ plugins: [{ removeViewBox: false }] })
-        ])))
     .pipe(gulp.dest(path.dist.img))
     .on('end', () => { reload(); });
 });
@@ -420,8 +432,9 @@ gulp.task('clean:dist', function () {
 });
 
 // Clear cache
-gulp.task('cache:clear', function () {
+gulp.task('cache:clear', function (done) {
     cache.clearAll();
+    done();
 });
 
 // Assembly Dev
